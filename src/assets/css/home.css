@@ -1,1 +1,99 @@
+html, body {
+    overflow-x: auto;  /* 가로 스크롤은 가능하게 설정 */
+}
 
+::-webkit-scrollbar {
+    display: none;  /* 스크롤바 숨기기 */
+}
+
+
+.home__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__image-container {
+    margin-top: 42px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* 이미지가 가로로 가운데 정렬되도록 설정 */
+    align-items: center;      /* 이미지가 세로로도 가운데 정렬되도록 설정 */
+    overflow: hidden;          /* 이미지가 영역 밖으로 벗어나지 않도록 */
+}
+
+.home__main-poster {
+    width: 280px;            /* 이미지 너비 고정 */
+    height: 416px;           /* 이미지 높이 고정 */
+    object-fit: contain;     /* 이미지 비율을 유지하면서 영역 안에 맞추기 */
+    border-radius: 7px;      /* 둥근 모서리 적용 */
+    margin: 14px 0px;
+}
+
+.home__content-title {
+    margin: 16px 0px;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.home__content-description {
+    margin: 8px 0px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.home__main-button {
+    margin: 10px 0;
+}
+
+.home__main-button {
+    display: flex;          /* 버튼을 가로로 배치 */
+    justify-content: space-between; /* 버튼 사이 간격을 일정하게 유지 */
+    gap: 10px;              /* 버튼 간의 간격 조정 (선택 사항) */
+}
+
+.home__button {
+    display: inline-flex;                /* 버튼 내의 요소들을 가로로 배치 */
+    align-items: center;          /* 아이콘과 텍스트 세로로 가운데 정렬 */
+    justify-content: center;      /* 아이콘과 텍스트 사이의 간격을 일정하게 맞춤 */
+    gap: 8px;                     /* 아이콘과 텍스트 사이의 간격 */
+    background-color: #DBE7FF;    /* 버튼 배경 색 */
+    border: none;                 /* 기본 버튼 테두리 제거 */
+    border-radius: 5px;           /* 버튼 모서리 둥글게 */
+    font-size: 16px;              /* 버튼 글자 크기 */
+    cursor: pointer;             /* 버튼 클릭 시 커서 모양 변경 */
+    text-align: center;           /* 버튼 텍스트 가운데 정렬 */
+    padding: 12px 24px;
+}
+
+.home__icon {
+    /* 여기에 아이콘 스타일 추가 */
+    width: 20px;                 /* 아이콘 크기 */
+    height: 20px;                /* 아이콘 크기 */
+    background-size: contain;    /* 아이콘 비율 유지 */
+    background-repeat: no-repeat; /* 아이콘 반복 방지 */
+}
+
+.home__text {
+    font-size: 15px;              /* 텍스트 크기 */
+    font-weight: 600;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.home__summary {
+    width: 1040px;        /* 너비 1040px로 고정 */
+    margin: 0 auto;       /* 부모 안에서 가로 중앙 정렬 */
+    padding: 40px 0 0 0;      /* 상하 여백을 추가 */
+}
+
+.home__summary-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.home__summary-component {
+    margin: 16px 0px;
+    display: flex;
+    justify-content: space-between; /* 컴포넌트 간 간격을 일정하게 유지 */
+}
