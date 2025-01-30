@@ -114,15 +114,17 @@ const SignUp = () => {
                 </div>
                 {/*회원가입*/}
                 {/*이 부분 trim일 경우 반영해서 변경해야함*/}
-                <div className={`signup-submit ${
-                        !(/*name.trim() &&*/ 
-                        !emailInput &&
-                        !passwordInput && 
-                        passwordMatch) 
-                            ? 'false' 
-                            : 'true'
-                    }`}>회원가입
-                </div>
+                <a href='/home'>
+                    <div className={`signup-submit ${
+                            !(/*name.trim() &&*/ 
+                            !emailInput &&
+                            !passwordInput && 
+                            passwordMatch) 
+                                ? 'false' 
+                                : 'true'
+                        }`} src='/home'>회원가입
+                    </div>
+                </a>
             </div>
         </div>
     );

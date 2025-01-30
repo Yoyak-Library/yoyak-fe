@@ -102,3 +102,7 @@
 .signup-submit.false {
     background-color: #9A9A9A;
 }
+
+.sign-container a {
+    text-decoration: none;
+}
