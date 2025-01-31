@@ -1,0 +1,275 @@
+.yoyak {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    min-width: 800px;
+}
+
+.yoyak-container {
+    width: 800px;
+    margin: auto;
+}
+
+.yoyak-mainImg {
+    width: 800px;
+    height: 440px;
+}
+
+.yoyak-intro {
+    background-color: rgb(255, 255, 255);
+    width: calc(100% - 16px);
+    height: 254px;
+    padding: 0px 8px;
+    margin-top: 24px;
+    border-bottom: 2px solid #F3F3F3;
+    position: relative;
+}
+
+.yoyak-intro-name {
+    font-size: 2.8em;
+    font-weight: 600;
+    color: #333333;
+}
+
+.yoyak-intro-count {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #7C7C7C;
+    margin-top: 8px;
+}
+
+.yoyak-intro-content {
+    font-size: 1.8em;
+    color: #333333;
+    margin-top: 16px;
+}
+
+.yoyak-intro-hashtag {
+    position: absolute;
+    left: 8px;
+    bottom: 42px;
+    font-size: 2em;
+    font-weight: 600;
+    color: #5D91FE;
+}
+
+.yoyak-intro-badge {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    width: 143px;
+    height: 28px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #7C7C7C;
+    display: flex;
+    align-items: center;
+}
+
+.yoyak-intro-badge img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
+
+.yoyak-intro-btns {
+    position: absolute;
+    right: 8px;
+    bottom: 32px;
+    width: 323px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.yoyak-intro-btn {
+    height: 44px;
+    background-color: #5D91FE;
+    color: #F5F7FA;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.yoyak-intro-btns #yoyak {
+    width: 128px;
+}
+
+.yoyak-intro-btns #review {
+    width: 187px;
+}
+
+.yoyak-intro-btns #yoyak img,
+.yoyak-intro-btns #review img {
+    width: 20px;
+    height: 20px;
+    margin-left: 24px;
+    margin-right: 8px;
+}
+
+.yoyak-summary {
+    position: relative;
+    overflow: hidden;
+}
+
+.yoyak-summary-rank {
+    position: absolute;
+    width: 131px;
+    height: 16px;
+    top: 16px;
+    right: 17px;
+    display: flex;
+    font-size: 12px;
+    color: #7E7E7E;
+    justify-content: space-between
+}
+
+.yoyak-summary-popular,
+.yoyak-summary-regist,
+.yoyak-summary-suggest {
+    cursor: pointer;
+}
+
+.yoyak-summary-component {
+    margin-top: 52px;
+}
+
+.yoyak-summary-component hr {
+    margin: 23px 0px;
+    width: 100%;
+    border: 1px solid #F3F3F3;
+}
+
+.yoyak-summary-more {
+    width: 140px;
+    height: 52px;
+    background-color: #5D91FE;
+    color: #fff;
+    font-weight: 600;
+    line-height: 52px;
+    text-align: center;
+    font-size: 1.8em;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 56px;
+    margin-bottom: 121px;
+    cursor: pointer;
+}
+
+.yoyak-filter {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 320px;
+    color: #333333;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yoyak-filter-name {
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+.yoyak-filter-reset {
+    font-size: 1.4em;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.yoyak-filter-reset img {
+    width: 20px;
+    height: 20px;
+}
+
+.yoyak-filter hr {
+    border: 0;
+    height: 2px;
+    background-color: #F3F3F3;
+    margin-top: 5px;
+    margin-bottom: 18px;
+}
+
+.yoyak-filter-length,
+.yoyak-filter-range,
+.yoyak-filter-spoiler {
+    font-size: 1.6em;
+}
+
+.yoyak-filter-length,
+.yoyak-filter-range {
+    margin-bottom: 24px;
+}
+
+.yoyak-filter-name2 {
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+
+.yoyak-filter-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.yoyak-filter input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    border: 1px solid #5D91FE;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.yoyak-filter input[type="checkbox"]:checked {
+    background-color: #5D91FE;
+}
+
+.yoyak-filter input[type="checkbox"]:checked::before {
+    content: '';
+    width: 6px;
+    height: 12px;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.yoyak-filter input[type="text"] {
+    width: 100%;
+    height: 19px;
+    border: none;
+    color: #333333;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    line-height: 19px;
+    border-bottom: 1px solid #989898;
+    background-color: transparent;
+    padding: 0px;
+}
+
+.yoyak-filter input[type="text"]::placeholder {
+    color: #767676;
+}
+
+.yoyak-filter input[type="text"]:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #989898;
+}
+
+  
