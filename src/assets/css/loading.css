@@ -1,0 +1,40 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.loading-title {
+    color: #5D91FE;
+    margin-bottom: 20px;
+}
+
+.loading-subtitle {
+    color: #333333;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.loading-complete-image {
+    width: 100px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.home-button {
+    background-color: #5D91FE;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.home-button:hover {
+    background-color: #4A7FCC;
+}
