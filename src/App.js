@@ -4,6 +4,9 @@ import Login from './pages/login/login';
 import SignUp from './pages/login/signup';
 import Home from './pages/home/home';
 import Yoyak from './pages/home/yoyak';
+import Onboarding1 from './pages/onboarding/onboarding1';  
+import Onboarding2 from './pages/onboarding/onboarding2';  
+import Loading from './pages/onboarding/loading';
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
         <Route path="/home" element={<Home />} />
         {/* 요약 */}
         <Route path="/yoyak" element={<Yoyak />} />
+        {/* 온보딩*/}
+        <Route path="/onboarding1" element={<Onboarding1 />} />
+        <Route path="/onboarding2" element={<Onboarding2 />} />
+        <Route path="/Loading" element={<Loading />} />
       </Routes>
     </Router>
   );
