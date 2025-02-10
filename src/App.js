@@ -4,6 +4,7 @@ import Login from './pages/login/login';
 import SignUp from './pages/login/signup';
 import Home from './pages/home/home';
 import Yoyak from './pages/home/yoyak';
+import OneReview from './pages/home/oneReview';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         {/* 요약 */}
         <Route path="/yoyak" element={<Yoyak />} />
+
+        <Route path="/review" element={<OneReview />} />
       </Routes>
     </Router>
   );

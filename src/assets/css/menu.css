@@ -6,11 +6,11 @@
     background-color: #F5F7FA;
     padding: 0 10px; /* 좌우 여백 추가 */
     box-sizing: border-box; /* padding을 포함하여 크기를 계산 */
-    width: 100vw; /* 화면 너비를 기준으로 설정 */
+    width: 100%; /* 화면 너비를 기준으로 설정 */
 }
 
 body {
-    min-width: 768px;
+    min-width: 800px;
     font-family: 'Pretendard', sans-serif;
 }
 
@@ -46,20 +46,22 @@ body {
     position: relative; /* '::after' 요소가 정상적으로 위치하도록 설정 */
 }
 
-#home {
+.navi-first.active {
     font-weight: 600;
     color: #333;
+    position: relative;
 }
 
-#home::after {
-    content: ''; /* 비어있는 내용으로 생성 */
+.navi-first.active::after {
+    content: ''; 
     position: absolute;
-    bottom: -6px; /* 텍스트 바로 아래에 위치 */
+    bottom: -6px;
     left: 0;
-    width: 100%; /* 글자 길이에 맞춰 바의 너비 설정 */
-    height: 2px; /* 바의 두께 */
-    background-color: #333; /* 검정색 */
+    width: 100%;
+    height: 2px;
+    background-color: #333;
 }
+
 
 .navi-second {
     font-weight: 500;
@@ -85,7 +87,7 @@ body {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .navi-space-between {
         flex-direction: row; /* 작은 화면에서는 세로로 쌓음 */
         align-items: center;
