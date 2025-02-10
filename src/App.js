@@ -7,6 +7,7 @@ import Yoyak from './pages/home/yoyak';
 import Onboarding1 from './pages/onboarding/onboarding1';  
 import Onboarding2 from './pages/onboarding/onboarding2';  
 import Loading from './pages/onboarding/loading';
+import YoyakList from './pages/home/yoyaklist';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         {/* 요약 */}
         <Route path="/yoyak" element={<Yoyak />} />
+        <Route path="/yoyaklist" element={<YoyakList />} />
         {/* 온보딩*/}
         <Route path="/onboarding1" element={<Onboarding1 />} />
         <Route path="/onboarding2" element={<Onboarding2 />} />
