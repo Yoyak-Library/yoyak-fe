@@ -37,7 +37,7 @@ body {
 
 .navi-first {
     font-weight: 500;
-    font-size: clamp(16px, 2vw, 20px); /* 최소 16px, 최대 20px */
+    font-size: clamp(14px, 1.5vw, 18px); /* 최소 16px, 최대 20px */
     margin: 0 30px;
     color: #5B5B5B;
     cursor: pointer;
