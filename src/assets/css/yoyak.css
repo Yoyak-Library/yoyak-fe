@@ -117,7 +117,7 @@
 .yoyak-summary-rank {
     position: absolute;
     width: 131px;
-    height: 16px;
+    height: 17px;
     top: 16px;
     right: 17px;
     display: flex;
@@ -129,7 +129,14 @@
 .yoyak-summary-popular,
 .yoyak-summary-regist,
 .yoyak-summary-suggest {
+    width: 34px;
     cursor: pointer;
+    text-align: center;
+}
+
+.yoyak-summary-rank #active {
+    color: #202020;
+    border-bottom: 1px solid #5D91FE;
 }
 
 .yoyak-summary-component {
@@ -250,7 +257,6 @@
 
 .yoyak-filter input[type="text"] {
     width: 100%;
-    height: 19px;
     border: none;
     color: #333333;
     font-size: 13px;

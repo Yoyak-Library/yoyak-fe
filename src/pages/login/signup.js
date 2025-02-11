@@ -74,7 +74,7 @@ const SignUp = () => {
                         onChange={handleEmailChange}
                         autocomplete="one-time-code"
                     />
-                    <div className={`sign-content-auth ${isRequested ? 'requested' : ''}`} onClick={handleRequstedClick}>{isRequested ? '요청 보냄' : '인증 요청'}</div>
+                    <div className={`sign-content-auth ${isRequested ? 'requested' : ''}`} onClick={handleRequstedClick}>{isRequested ? '요청 보냄' : '중복 확인'}</div>
                     {emailInput && (<div className='login-content-warn'>유효하지 않은 이메일 형식입니다.</div>)}
                 </div>
                 {/*인증번호*/}

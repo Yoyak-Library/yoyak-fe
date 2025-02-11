@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/login';
 import SignUp from './pages/login/signup';
 import Home from './pages/home/home';
-import Yoyak from './pages/home/yoyak';
+import Yoyak from './pages/yoyak/yoyak';
+import ViewYoyak from './pages/yoyak/viewYoyak';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         {/* 요약 */}
         <Route path="/yoyak" element={<Yoyak />} />
+        {/* 요약글 보기 */}
+        <Route path="/viewYoyak" element={<ViewYoyak />} />
       </Routes>
     </Router>
   );
