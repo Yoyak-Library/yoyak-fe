@@ -5,6 +5,11 @@ import SignUp from './pages/login/signup';
 import Home from './pages/home/home';
 import Yoyak from './pages/yoyak/yoyak';
 import ViewYoyak from './pages/yoyak/viewYoyak';
+import Yoyak from './pages/home/yoyak';
+import OneReview from './pages/home/oneReview';
+import Onboarding1 from './pages/onboarding/onboarding1';  
+import Onboarding2 from './pages/onboarding/onboarding2';  
+import Loading from './pages/onboarding/loading';
 
 function App() {
   return (
@@ -25,6 +30,12 @@ function App() {
         <Route path="/yoyak" element={<Yoyak />} />
         {/* 요약글 보기 */}
         <Route path="/viewYoyak" element={<ViewYoyak />} />
+
+        <Route path="/review" element={<OneReview />} />
+        {/* 온보딩*/}
+        <Route path="/onboarding1" element={<Onboarding1 />} />
+        <Route path="/onboarding2" element={<Onboarding2 />} />
+        <Route path="/Loading" element={<Loading />} />
       </Routes>
     </Router>
   );
