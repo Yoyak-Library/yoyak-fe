@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import '../assets/css/yoyak.css';
 
-const Sort2 = () => {
+const Sort = () => {
     const [activeTab, setActiveTab] = useState('popular');
 
     return (
@@ -17,4 +17,4 @@ const Sort2 = () => {
     );
 }
 
-export default Sort2;
+export default Sort;

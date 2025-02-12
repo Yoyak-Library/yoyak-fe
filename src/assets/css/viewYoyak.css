@@ -195,7 +195,7 @@
 }
 
 .viewYoyak-comment-rank {
-    gap: 20px;
+    width: 120px;
     height: 34px;
     display: flex;
     font-size: 16px;
@@ -385,22 +385,27 @@
     cursor: pointer;
 }
 
-.viewYoyak-highlight-colors #blue {
+.viewYoyak-highlight-colors #blue,
+.viewYoyak-highlight-blue {
     background-color: #80A9FE;
 }
 
-.viewYoyak-highlight-colors #yellow {
+.viewYoyak-highlight-colors #yellow,
+.viewYoyak-highlight-yellow {
     background-color: #FFE062;
 }
 
-.viewYoyak-highlight-colors #red {
+.viewYoyak-highlight-colors #red,
+.viewYoyak-highlight-red {
     background-color: #FF9292;
 }
 
-.viewYoyak-highlight-colors #green {
+.viewYoyak-highlight-colors #green,
+.viewYoyak-highlight-green {
     background-color: #9CFF93;
 }
 
-.viewYoyak-highlight-colors #purple {
+.viewYoyak-highlight-colors #purple,
+.viewYoyak-highlight-purple {
     background-color: #BB8FF3;
 }

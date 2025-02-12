@@ -6,37 +6,38 @@ import btn_up from '../assets/images/btn_up.png';
 
 const Dropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isIndex, setIsIndex] = useState(0);
+
+    const indexOptions = ['1', '2', '13', '14', '15'];
 
     const toggleDropdown = () => {
         setIsOpen(prev => !prev);
     };
 
+
     return (
         <div>
             <div className="viewYoyak-dropdown" onClick={toggleDropdown}>
                 <img src={isOpen ? btn_up : btn_down} alt="Toggle Button" />
-                <div className="viewYoyak-dropdown-episode">1화</div>
+                <div className="viewYoyak-dropdown-episode">{indexOptions[isIndex]}화</div>
                 <div className="viewYoyak-dropdown-subname">부제목</div>
             </div>
 
             {isOpen && (
                 <div className="viewYoyak-dropdown-episodes">
                     {/* 5개 이상부터는 스크롤 미구현 */}
-                    <label className="viewYoyak-dropdown-num">
-                        <input type="radio" name="option" value="1" /><span>1화</span>
-                    </label>
-                    <label className="viewYoyak-dropdown-num">
-                        <input type="radio" name="option" value="2" /><span>2화</span>
-                    </label>
-                    <label className="viewYoyak-dropdown-num">
-                        <input type="radio" name="option" value="13" /><span>13화</span>
-                    </label>
-                    <label className="viewYoyak-dropdown-num">
-                        <input type="radio" name="option" value="14" /><span>14화</span>
-                    </label>
-                    <label className="viewYoyak-dropdown-num">
-                        <input type="radio" name="option" value="15" /><span>15화</span>
-                    </label>
+                    {indexOptions.map((item, index) => (
+                        <label className="viewYoyak-dropdown-num">
+                            <input 
+                                type="radio" 
+                                name="option" 
+                                value={index} 
+                                checked={isIndex === index}
+                                onChange={() => setIsIndex(index)}
+                            />
+                            <span>{item}화</span>
+                        </label>
+                    ))}
                 </div>
             )}
         </div>
