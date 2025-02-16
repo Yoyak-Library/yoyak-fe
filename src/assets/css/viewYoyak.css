@@ -92,17 +92,26 @@
 .viewYoyak-dropdown-episodes {
     position: absolute;
     top: 43px;
-    display: flex;
     width: 127px;
     max-height: 260px;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    flex-direction: column;
-    align-items: flex-start;
+    overflow-y: auto;
     border-radius: 8px;
     background-color: #FFF;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.04);
     z-index: 1;
+}
+
+.viewYoyak-dropdown-episodes::-webkit-scrollbar {
+    width: 6px;
+}
+
+.viewYoyak-dropdown-episodes::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+.viewYoyak-dropdown-episodes::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .viewYoyak-dropdown-num {
@@ -127,6 +136,10 @@
 
 .viewYoyak-dropdownbar {
     position: absolute;
+}
+
+.viewYoyak-dropdownPosition {
+    position: absolute;
     top: 136px;
 }
 
@@ -138,7 +151,24 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 125%;
+    max-height: 440px;
+    overflow-y: auto;
 }
+
+
+.viewYoyak-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.viewYoyak-content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+.viewYoyak-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 
 .viewYoyak-comment {
     position: relative;

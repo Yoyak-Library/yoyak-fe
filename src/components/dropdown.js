@@ -8,7 +8,7 @@ const Dropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isIndex, setIsIndex] = useState(0);
 
-    const indexOptions = ['1', '2', '13', '14', '15'];
+    const indexOptions = ['1', '2', '13', '14', '15', '26', '32']; // 예시
 
     const toggleDropdown = () => {
         setIsOpen(prev => !prev);
@@ -16,7 +16,7 @@ const Dropdown = () => {
 
 
     return (
-        <div>
+        <div className="viewYoyak-dropdownbar">
             <div className="viewYoyak-dropdown" onClick={toggleDropdown}>
                 <img src={isOpen ? btn_up : btn_down} alt="Toggle Button" />
                 <div className="viewYoyak-dropdown-episode">{indexOptions[isIndex]}화</div>
@@ -25,7 +25,6 @@ const Dropdown = () => {
 
             {isOpen && (
                 <div className="viewYoyak-dropdown-episodes">
-                    {/* 5개 이상부터는 스크롤 미구현 */}
                     {indexOptions.map((item, index) => (
                         <label className="viewYoyak-dropdown-num">
                             <input 

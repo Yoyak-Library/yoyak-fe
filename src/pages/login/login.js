@@ -30,13 +30,13 @@ const Login = () => {
                         <div className='login-content'>
                             <div className='login-content-name'>비밀번호</div>
                             <input className='login-content-input' placeholder='비밀번호를 입력하세요.' type={visibility ? 'text' : 'password'} autocomplete="one-time-code"/>
-                            <img className='login-content-eye' src={visibility ? password_eye_on : password_eye_off} onClick={handleVisibility}/>
+                            <img className='login-content-eye' src={visibility ? password_eye_off : password_eye_on} onClick={handleVisibility}/>
                             <div className='login-content-warn'>안내메시지 아직임!</div>
                         </div>
                         <div className='login-submit'>로그인</div>
                         <div className='login-submit-kakao'><img src={kakao} />카카오 로그인</div>
                         <div className='login-signup'>아직 계정이 없으신가요?<a href='/signup'>회원가입</a></div>
-                        <div className='login-find'>이메일이나 패스워드를 잊어버리셨나요?<a href=''>이메일/패스워드 찾기</a></div>
+                        <div className='login-find'>이메일이나 패스워드를 잊어버리셨나요?<a href='/findAccount'>이메일/패스워드 찾기</a></div>
                     </div>
                 </div>
             </div>

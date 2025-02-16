@@ -21,7 +21,7 @@
 }
 
 /*태블릿 화면*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .wrap {
         min-height: 1024px;
     }
@@ -77,11 +77,13 @@
 
 .login-title {
     font-size: 3.2em;
+    font-weight: 600;
 }
 
 .login-subtitle {
     font-size: 1.6em;
     color: #767676;
+    font-weight: 500;
 }
 
 .login-content {
@@ -91,9 +93,10 @@
 }
 
 .login-content-name {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #767676;
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .login-content-input {
@@ -106,7 +109,13 @@
     margin-bottom: 5px;
     outline: none;
     box-sizing: border-box;
+    font-weight: 500;
 }
+
+.login-content-input::placeholder {
+    color: var(--Gray-30, #B8B8B8);
+}
+
 
 .login-content-input[type=text]:focus,
 .login-content-input[type=password]:focus {

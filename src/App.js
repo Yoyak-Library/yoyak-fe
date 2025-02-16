@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/login';
 import SignUp from './pages/login/signup';
+import FindAccount from './pages/login/findAccount';
 import Home from './pages/home/home';
 import Yoyak from './pages/yoyak/yoyak';
 import ViewYoyak from './pages/yoyak/viewYoyak';
@@ -24,6 +25,8 @@ function App() {
         <Route path="/" element={<Login />} />
         {/* 회원가입 */}
         <Route path="/signup" element={<SignUp />} />
+        {/* 아이디/패스워드 찾기 */}
+        <Route path="/findAccount" element={<FindAccount />} />
         {/* 홈 */}
         <Route path="/home" element={<Home />} />
         {/* 요약 */}

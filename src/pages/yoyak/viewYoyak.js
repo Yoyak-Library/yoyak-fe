@@ -82,7 +82,7 @@ const ViewYoyak = () => {
                         </div>
                     </div>
                     <div className="viewYoyak-dropdownName">회차 제목</div>
-                    <div className="viewYoyak-dropdownbar"><Dropdown /></div>
+                    <div className="viewYoyak-dropdownPosition"><Dropdown /></div>
                     <div
                         className="viewYoyak-content"
                         ref={contentRef}
