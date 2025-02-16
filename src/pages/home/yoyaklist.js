@@ -1,5 +1,6 @@
 import Menu from "../../components/menu";
 import Summary2 from '../../components/summary2';
+import RankSelector from "../../components/rankSelector";
 
 import React, { useState } from "react";
 import { Search } from "lucide-react"; // 검색 아이콘
@@ -23,15 +24,17 @@ const YoyakList = () => {
         <div className="yoyaklist">
             <Menu />
             <div className="yoyaklist-container">
-                <div className="yoyaklist-search-bar">
-                    <Search className="yoyaklist-search-icon" />
-                    <input type="text" placeholder="요약글 제목 또는 콘텐츠를 입력하세요." className="yoyaklist-search-input" />
+                <div className="yoyaklist-search-container">
+                    <div className="yoyaklist-search-bar">
+                        <Search className="yoyaklist-search-icon" />
+                        <input type="text" placeholder="요약글 제목 또는 콘텐츠를 입력하세요." className="yoyaklist-search-input" />
+                    </div>
                 </div>
 
                 <div className="yoyaklist-filters">
                     <div className="yoyaklist-filter-group">
                         <p>요약글 길이</p>
-                        <div className="yoyaklist-filter-options">
+                        <div className="yoyaklist-filter-options column-layout">
                             <label className="yoyaklist-filter-option">
                                 <input
                                     type="checkbox"
@@ -61,31 +64,7 @@ const YoyakList = () => {
                         </div>
                     </div>
 
-                    <div className="yoyaklist-filter-group">
-                        <p>스포일러</p>
-                        <div className="yoyaklist-filter-options">
-                            <label className="yoyaklist-filter-option">
-                                <input
-                                    type="radio"
-                                    name="yoyaklistSpoiler"
-                                    value="포함"
-                                    checked={yoyaklistSpoilerOption === "포함"}
-                                    onChange={() => setYoyaklistSpoilerOption("포함")}
-                                />
-                                포함
-                            </label>
-                            <label className="yoyaklist-filter-option">
-                                <input
-                                    type="radio"
-                                    name="yoyaklistSpoiler"
-                                    value="미포함"
-                                    checked={yoyaklistSpoilerOption === "미포함"}
-                                    onChange={() => setYoyaklistSpoilerOption("미포함")}
-                                />
-                                미포함
-                            </label>
-                        </div>
-                    </div>
+                    <div className="yoyaklist-separator"></div> {/* 세로선 추가 */}
 
                     <div className="yoyaklist-filter-group">
                         <p>범위</p>
@@ -97,7 +76,37 @@ const YoyakList = () => {
                             className="yoyaklist-range-input"
                         />
                     </div>
+
+                    <div className="yoyaklist-separator"></div> {/* 세로선 추가 */}
+
+                    <div className="yoyaklist-filter-group">
+                        <p>스포일러</p>
+                        <div className="yoyaklist-filter-options column-layout">
+                            <label className="yoyaklist-filter-option">
+                                <input
+                                    type="checkbox"
+                                    name="yoyaklistSpoiler"
+                                    value="포함"
+                                    checked={yoyaklistSpoilerOption === "포함"}
+                                    onChange={() => setYoyaklistSpoilerOption("포함")}
+                                />
+                                포함
+                            </label>
+                            <label className="yoyaklist-filter-option">
+                                <input
+                                    type="checkbox"
+                                    name="yoyaklistSpoiler"
+                                    value="미포함"
+                                    checked={yoyaklistSpoilerOption === "미포함"}
+                                    onChange={() => setYoyaklistSpoilerOption("미포함")}
+                                />
+                                미포함
+                            </label>
+                        </div>
+                    </div>
                 </div>
+
+                <div className="yoyaklist-line"></div>  {/* 추가한 가로선 div */}
 
                 <div className="yoyaklist-genre-container">
                     {yoyaklistCategories.map((category, index) => (
@@ -110,24 +119,21 @@ const YoyakList = () => {
                         </div>
                     ))}
                 </div>
-                {/*요약본*/}
+
+                {/* 요약본 */}
                 <div className='yoyak-summary'>
-                    <div className='yoyak-summary-rank'>
-                        <div className='yoyak-summary-popular'>인기순</div>
-                        <div className='yoyak-summary-regist'>등록순</div>
-                        <div className='yoyak-summary-suggest'>추천순</div>
-                    </div>
-                    {/*요약본들 컴포넌트*/}
+                    <RankSelector />
                     <div className='yoyak-summary-component'>
-                        <Summary2/>
+                        <Summary2 />
                         <hr />
-                        <Summary2/>
+                        <Summary2 />
                         <hr />
-                        <Summary2/>
+                        <Summary2 />
                         <hr />
-                        <Summary2/>
+                        <Summary2 />
                         <hr />
                     </div>
+                    <div className="yoyak-summary-more">더보기</div>
                 </div>
             </div>
         </div>

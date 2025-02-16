@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     background-color: #ffffff; /* 전체 배경 흰색 */
     color: #333333; /* 글자 색상 */
-    font-family: Arial, sans-serif;
+    font-family: 'Pretendard', sans-serif;
     height: 100%; /* 화면 전체 높이 */
   }
   
