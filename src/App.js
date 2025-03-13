@@ -11,6 +11,7 @@ import Onboarding1 from './pages/onboarding/onboarding1';
 import Onboarding2 from './pages/onboarding/onboarding2';  
 import Loading from './pages/onboarding/loading';
 import MyPost from './pages/library/myPost';
+import CheckPassword from './pages/mypage/check-password';
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
         <Route path="/onboarding1" element={<Onboarding1 />} />
         <Route path="/onboarding2" element={<Onboarding2 />} />
         <Route path="/Loading" element={<Loading />} />
+
+        <Route path="/check" element={<CheckPassword />} />
       </Routes>
     </Router>
   );

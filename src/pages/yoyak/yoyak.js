@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Menu from "../../components/menu";
 import Sort from '../../components/sort';
@@ -13,6 +14,8 @@ import star from '../../assets/images/star.png';
 import reset from '../../assets/images/reset.png';
 
 const YOYAK = () => {
+    const navigate = useNavigate();
+
     const [summaryCount, setSummaryCount] = useState(4);
     const [checked, setChecked] = useState({
         shortSummary: false,
@@ -57,7 +60,7 @@ const YOYAK = () => {
                     <div className='yoyak-intro-badge'><img src={top} />대중픽 Top 10 선정</div>
                     <div className='yoyak-intro-btns'>
                         <div className='yoyak-intro-btn' id="yoyak"><img src={write} />요약하기</div>
-                        <div className='yoyak-intro-btn' id="review"><img src={star} />한줄 리뷰 보러가기</div>
+                        <div className='yoyak-intro-btn' id="review" onClick={() => navigate('/review')}><img src={star} />한줄 리뷰 보러가기</div>
                     </div>
 
                 </div>
