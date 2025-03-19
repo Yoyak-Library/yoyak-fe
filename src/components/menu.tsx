@@ -5,7 +5,7 @@ import Logo from '../assets/images/yoyaklery_logo.png';
 import Profile from '../assets/images/ic_profile_img.png';
 import Alarm from '../assets/images/ic_bell_32.svg';
 
-const Menu = () => {
+const Menu: React.FC = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
