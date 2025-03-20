@@ -62,11 +62,15 @@
 }
 
 .summary2-more {
-    font-size: 14px;
-    color: #5D91FE;
     position: absolute;
     top: 80px;
-    right: 6px;
+    right: 6px
+}
+
+.summary2-more a {
+    font-size: 14px;
+    color: #5D91FE;
     cursor: pointer;
+    text-decoration: none;
     border-bottom: 1px solid #5D91FE;
 }

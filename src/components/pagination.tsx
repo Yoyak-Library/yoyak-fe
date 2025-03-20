@@ -6,20 +6,20 @@ import left_arrow_first from '../assets/images/pagination_left_arrow_first.png';
 import left_arrow from  '../assets/images/pagination_left_arrow.png';
 import right_arrow from '../assets/images/pagination_right_arrow.png';
 
-const Pagination = () => {
-  const [activeNum, setActiveNum] = useState(0);  // 현재 선택된 페이지 (0, 1, 2, 3, 4 인덱스 역할)
-  const [pageStart, setPageStart] = useState(1); // 현재 페이지 그룹 시작 번호 (번호를 의미)
+const Pagination: React.FC = () => {
+  const [activeNum, setActiveNum] = useState<number>(0);  // 현재 선택된 페이지 (0, 1, 2, 3, 4 인덱스 역할)
+  const [pageStart, setPageStart] = useState<number>(1); // 현재 페이지 그룹 시작 번호 (번호를 의미)
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     setActiveNum(index);
   };
 
-  const handleNext = () => {
+  const handleNext = (): void => {
     setPageStart((prev) => prev + 5);
     setActiveNum(0);
   };
 
-  const handlePrev = () => {
+  const handlePrev = (): void => {
     if (pageStart > 1) {
       setPageStart((prev) => prev - 5);
       setActiveNum(0);

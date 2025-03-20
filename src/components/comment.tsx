@@ -7,10 +7,10 @@ import thumbs_up from '../assets/images/thumbs_up.png';
 import thumbs_up_filled from '../assets/images/thumbs_up_filled.png';
 import chat from  '../assets/images/chat.png';
 
-const Comment = () => {
-    const [isThumbClick, setIsThumbClick] = useState(0);
+const Comment: React.FC = () => {
+    const [isThumbClick, setIsThumbClick] = useState<boolean>(false);
 
-    const handelThumbClick = () => {
+    const handelThumbClick = (): void => {
         setIsThumbClick(prev => !prev);
     }
 

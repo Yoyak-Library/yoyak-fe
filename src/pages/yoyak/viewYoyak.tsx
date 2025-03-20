@@ -19,7 +19,8 @@ import highlight_red from '../../assets/images/highlight_red.png';
 import highlight_green from '../../assets/images/highlight_green.png';
 import highlight_purple from '../../assets/images/highlight_purple.png';
 
-const highlightImages = {
+// 하이라이트 이미지 객체
+const highlightImages: Record<string, string> = {
     blue: highlight_blue,
     yellow: highlight_yellow,
     red: highlight_red,
@@ -28,39 +29,42 @@ const highlightImages = {
 };
 
 const ViewYoyak = () => {
-    const [isOpen, setIsOpen] = useState(true);
-    const [isHeartClick, setIsHeartClick] = useState(0);
-    const [selectedColor, setSelectedColor] = useState(null); // 선택된 색상 상태
-    const contentRef = useRef(null);  // content 영역
+    const [isHeartClick, setIsHeartClick] = useState<boolean>(false); // 하트 클릭 상태 (true / false)
+    const [selectedColor, setSelectedColor] = useState<"blue" | "yellow" | "red" | "green" | "purple" | null>(null); // 하이라이트 색상 선택 (초기값 null)
+    const [isOpen, setIsOpen] = useState<boolean>(true); // 하이라이트 선택창 열림 여부
+    const contentRef = useRef<HTMLDivElement | null>(null); // content 영역
 
-    const handelHeartClick = () => {
+    // 하트 클릭 이벤트
+    const handelHeartClick = (): void => {
         setIsHeartClick(prev => !prev);
-    }
+    };
 
-    const handleHignlightClick = () => {
+    // 하이라이트 선택창 열기 / 닫기
+    const handleHignlightClick = (): void => {
         setIsOpen(prev => !prev);
-    }
+    };
 
-    const handleColorClick = (color) => {
+    // 색상 선택
+    const handleColorClick = (color: "blue" | "yellow" | "red" | "green" | "purple"): void => {
         setSelectedColor(color);
-    }
+    };
 
     // 하이라이트 처리
-    const handleHighlightClick = () => {
+    const handleHighlightClick = (): void => {
         if (!contentRef.current) return;
 
-        const selection = window.getSelection();  // 선택된 텍스트 가져오기
-        if (selection.rangeCount) {
+        const selection = window.getSelection();
+        if (selection && selection.rangeCount > 0) {
             const range = selection.getRangeAt(0);
             const selectedText = selection.toString();
 
             if (selectedText && selectedColor) {
                 const span = document.createElement("span");
                 span.classList.add(`viewYoyak-highlight-${selectedColor}`);
-                span.textContent = selectedText;  // 선택된 텍스트
+                span.textContent = selectedText;
 
-                range.deleteContents();  // 기존 내용 삭제
-                range.insertNode(span);  // 새로운 하이라이트된 내용 삽입
+                range.deleteContents();
+                range.insertNode(span);
             }
         }
     };
@@ -72,10 +76,11 @@ const ViewYoyak = () => {
                 {/* 제목 */}
                 <div className="viewYoyak-title"><a href="/yoyak">더 글로리</a></div>
                 <div className="viewYoyak-subtitle">1화 ~ 3화 스포일러 포함</div>
+                
                 {/* 요약글 */}
                 <div className="viewYoyak-view">
                     <div className='viewYoyak-profile'>
-                        <img src={profile} />
+                        <img src={profile} alt="프로필 이미지" />
                         <div>
                             <div className='viewYoyak-nick'>김슈니</div>
                             <div className='viewYoyak-time'>2030.01.01</div>
@@ -92,15 +97,15 @@ const ViewYoyak = () => {
                         남기며 무자비하게 괴롭힌다. 학교와 어른들은 그녀를 외면하고, 동은은 절망 속에서 학교를
                         떠난다. 동은은 과거의 상처를 되새기며
                     </div>
-                    <div className="viewYoyak-heart" >
-                        <img src={isHeartClick ? heart_filled : heart} onClick={handelHeartClick}/>8
+                    <div className="viewYoyak-heart">
+                        <img src={isHeartClick ? heart_filled : heart} onClick={handelHeartClick} alt="좋아요" />
                     </div>
                     <div className="viewYoyak-highlight">
-                        <img src={selectedColor ? highlightImages[selectedColor] : highlight} onClick={handleHignlightClick} />
+                        <img src={selectedColor ? highlightImages[selectedColor] : highlight} onClick={handleHignlightClick} alt="하이라이트" />
                     </div>
                     {!isOpen &&
                         <div className="viewYoyak-highlight-colors">
-                            {["blue", "yellow", "red", "green", "purple"].map(color => (
+                            {(["blue", "yellow", "red", "green", "purple"] as const).map((color) => (
                                 <div key={color} className="viewYoyak-highlight-item">
                                     <div
                                         className="viewYoyak-highlight-color"
@@ -108,18 +113,17 @@ const ViewYoyak = () => {
                                         onClick={() => handleColorClick(color)}
                                     ></div>
                                     {selectedColor === color && (
-                                        <div
-                                            className="viewYoyak-highlight-blank"
-                                        ></div>
+                                        <div className="viewYoyak-highlight-blank"></div>
                                     )}
                                 </div>
                             ))}
                         </div>
                     }
                 </div>
+
                 {/* 댓글 */}
                 <div className="viewYoyak-comment">
-                    <textarea class="viewYoyak-comment-write" placeholder="댓글을 입력하세요"></textarea>
+                    <textarea className="viewYoyak-comment-write" placeholder="댓글을 입력하세요"></textarea>
                     <div className="viewYoyak-comment-registration">등록하기</div>
                     <div className="viewYoyak-comment-sort"><Sort /></div>
                     <div className="viewYoyak-comment-content">
@@ -132,7 +136,7 @@ const ViewYoyak = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ViewYoyak;
