@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import '../assets/css/yoyak.css';
 
-const Sort = () => {
-    const [activeTab, setActiveTab] = useState('popular');
+const Sort: React.FC = () => {
+    const [activeTab, setActiveTab] = useState<string>('popular');
 
     return (
         <div className='yoyak-summary-rank'>

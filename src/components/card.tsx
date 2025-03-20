@@ -4,7 +4,7 @@ import '../assets/css/myPost.css';
 
 import example_img from '../assets/images/yoyak_example_img.png';
 
-const Card = () => {
+const Card:React.FC = () => {
     const cardCount = 15; // 원하는 카드 개수를 지정
     // 한 페이지에 15개씩 보이도록 수정 예정
     const cards = new Array(cardCount).fill(null);

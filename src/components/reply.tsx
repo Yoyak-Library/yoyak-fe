@@ -6,7 +6,7 @@ import profile from '../assets/images/summary_profile.png';
 import reply from '../assets/images/reply.png';
 
 
-const Reply = () => {
+const Reply: React.FC = () => {
 
     return (
         <div className="reply">

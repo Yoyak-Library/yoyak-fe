@@ -3,7 +3,15 @@ import React from 'react';
 import '../../assets/css/signup.css';
 import '../../assets/css/findAccount.css';
 
-const FindPassword = ({ name, nick, email, onClose }) => {
+// Props 타입 정의
+interface FindPasswordProps {
+    name: string;
+    nick: string;
+    email: string;
+    onClose: () => void;
+}
+
+const FindPassword:React.FC<FindPasswordProps> = ({ name, nick, email, onClose }) => {
     return (
         <div className='sign-checked' id='password'>
             <div className='sign-checked-email'>{name}/{nick}/{email}</div>

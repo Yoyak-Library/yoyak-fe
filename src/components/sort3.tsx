@@ -5,17 +5,17 @@ import '../assets/css/myPost.css';
 import dropdown_arrow from '../assets/images/dropdown_arrow.png';
 import dropdown_check from  '../assets/images/dropdown_check.png';
 
-const Sort3 = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isClick, setIsClick] = useState(0);
+const Sort3: React.FC = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isClick, setIsClick] = useState<number>(0);
 
     const sortOptions = ['제목순', '콘텐츠순', '작성일순'];
 
-    const dropdown = () => {
+    const dropdown = (): void => {
         setIsOpen(prev => !prev);
     }
 
-    const clickActive = (index) => {
+    const clickActive = (index: number) => {
         setIsClick(index);
         setIsOpen(false);
     }

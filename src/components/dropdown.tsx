@@ -4,13 +4,13 @@ import '../assets/css/viewYoyak.css';
 import btn_down from '../assets/images/btn_down.png';
 import btn_up from '../assets/images/btn_up.png';
 
-const Dropdown = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isIndex, setIsIndex] = useState(0);
+const Dropdown: React.FC = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isIndex, setIsIndex] = useState<number>(0);
 
     const indexOptions = ['1', '2', '13', '14', '15', '26', '32']; // 예시
 
-    const toggleDropdown = () => {
+    const toggleDropdown = (): void => {
         setIsOpen(prev => !prev);
     };
 

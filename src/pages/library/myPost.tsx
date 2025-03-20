@@ -9,13 +9,13 @@ import '../../assets/css/myPost.css';
 
 import back_arrow from '../../assets/images/back_arrow.png';
 
-const MyPost = () => {
+const MyPost:React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const buttons = ['전체', '작성한 요약', '작성 중인 요약'];
 
-    const handleClick = (index) => {
+    const handleClick = (index: number) => {
         setActiveIndex(index);
-    };
+    };    
 
     return (
         <div className='myPost'>
