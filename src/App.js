@@ -11,6 +11,7 @@ import Loading from './pages/onboarding/loading';
 import YoyakList from './pages/home/yoyaklist';
 import Summarize1 from './pages/summation/summarize1';
 import Summarize2 from './pages/summation/summarize2';
+import PersonalLibrary from './pages/home/personalLibrary';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
         {/* 요약글쓰기기*/}
         <Route path="/summarize1" element={<Summarize1 />} />
         <Route path="/summarize2" element={<Summarize2 />} />
+
+        {/* 라이브러리 */}
+        <Route path="/personallibrary" element={<PersonalLibrary />} />
 
       </Routes>
     </Router>
