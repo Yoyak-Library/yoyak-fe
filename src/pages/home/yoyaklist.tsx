@@ -2,22 +2,36 @@ import Menu from "../../components/menu";
 import Summary2 from '../../components/summary2';
 import RankSelector from "../../components/rankSelector";
 
-import React, { useState } from "react";
-import { Search } from "lucide-react"; // 검색 아이콘
+import React, { useState, ChangeEvent } from "react";
+import { Search } from "lucide-react";
 import "../../assets/css/yoyaklist.css";
 
-const yoyaklistCategories = ["애니메이션", "다큐멘터리", "액션", "로맨스", "코미디", "공포", "스릴러", "SF", "판타지"];
+const yoyaklistCategories: string[] = ["애니메이션", "다큐멘터리", "액션", "로맨스", "코미디", "공포", "스릴러", "SF", "판타지"];
 
-const YoyakList = () => {
-    const [yoyaklistSelectedCategories, setYoyaklistSelectedCategories] = useState([]);
-    const [yoyaklistSummaryLength, setYoyaklistSummaryLength] = useState([]);
-    const [yoyaklistSpoilerOption, setYoyaklistSpoilerOption] = useState(null);
-    const [yoyaklistEpisodeRange, setYoyaklistEpisodeRange] = useState("");
+const YoyakList: React.FC = () => {
+    const [yoyaklistSelectedCategories, setYoyaklistSelectedCategories] = useState<string[]>([]);
+    const [yoyaklistSummaryLength, setYoyaklistSummaryLength] = useState<string[]>([]);
+    const [yoyaklistSpoilerOption, setYoyaklistSpoilerOption] = useState<string | null>(null);
+    const [yoyaklistEpisodeRange, setYoyaklistEpisodeRange] = useState<string>("");
 
-    const yoyaklistHandleCategoryClick = (category) => {
+    const yoyaklistHandleCategoryClick = (category: string) => {
         setYoyaklistSelectedCategories((prev) =>
             prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
         );
+    };
+
+    const handleSummaryLengthChange = (value: string) => {
+        setYoyaklistSummaryLength((prev) =>
+            prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value]
+        );
+    };
+
+    const handleSpoilerOptionChange = (value: string) => {
+        setYoyaklistSpoilerOption(value);
+    };
+
+    const handleEpisodeRangeChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setYoyaklistEpisodeRange(e.target.value);
     };
 
     return (
@@ -33,51 +47,47 @@ const YoyakList = () => {
 
                 <div className="yoyaklist-filters">
                     <div className="yoyaklist-filter-group">
-                        <p>요약글 길이</p>
-                        <div className="yoyaklist-filter-options column-layout">
-                            <label className="yoyaklist-filter-option">
-                                <input
-                                    type="checkbox"
-                                    value="단문"
-                                    checked={yoyaklistSummaryLength.includes("단문")}
-                                    onChange={() =>
-                                        setYoyaklistSummaryLength((prev) =>
-                                            prev.includes("단문") ? prev.filter((s) => s !== "단문") : [...prev, "단문"]
-                                        )
-                                    }
-                                />
-                                단문 요약
-                            </label>
-                            <label className="yoyaklist-filter-option">
-                                <input
-                                    type="checkbox"
-                                    value="장문"
-                                    checked={yoyaklistSummaryLength.includes("장문")}
-                                    onChange={() =>
-                                        setYoyaklistSummaryLength((prev) =>
-                                            prev.includes("장문") ? prev.filter((s) => s !== "장문") : [...prev, "장문"]
-                                        )
-                                    }
-                                />
-                                장문 요약
-                            </label>
+                        <div className="yoyaklist-filter-group summary-length">
+                            <p>요약글 길이</p>
+                            <div className="yoyaklist-filter-options column-layout">
+                                <label className="yoyaklist-filter-option">
+                                    <input
+                                        type="checkbox"
+                                        value="단문"
+                                        checked={yoyaklistSummaryLength.includes("단문")}
+                                        onChange={() => handleSummaryLengthChange("단문")}
+                                    />
+                                    단문 요약
+                                </label>
+                                <label className="yoyaklist-filter-option">
+                                    <input
+                                        type="checkbox"
+                                        value="장문"
+                                        checked={yoyaklistSummaryLength.includes("장문")}
+                                        onChange={() => handleSummaryLengthChange("장문")}
+                                    />
+                                    장문 요약
+                                </label>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="yoyaklist-separator"></div> {/* 세로선 추가 */}
+                    <div className="yoyaklist-separator"></div>
 
                     <div className="yoyaklist-filter-group">
-                        <p>범위</p>
-                        <input
-                            type="text"
-                            placeholder="회차를 입력해주세요."
-                            value={yoyaklistEpisodeRange}
-                            onChange={(e) => setYoyaklistEpisodeRange(e.target.value)}
-                            className="yoyaklist-range-input"
-                        />
+                        <div className="yoyaklist-filter-group range">
+                            <p>범위</p>
+                            <input
+                                type="text"
+                                placeholder="회차를 입력해주세요."
+                                value={yoyaklistEpisodeRange}
+                                onChange={handleEpisodeRangeChange}
+                                className="yoyaklist-range-input"
+                            />
+                        </div>
                     </div>
 
-                    <div className="yoyaklist-separator"></div> {/* 세로선 추가 */}
+                    <div className="yoyaklist-separator"></div>
 
                     <div className="yoyaklist-filter-group">
                         <p>스포일러</p>
@@ -88,7 +98,7 @@ const YoyakList = () => {
                                     name="yoyaklistSpoiler"
                                     value="포함"
                                     checked={yoyaklistSpoilerOption === "포함"}
-                                    onChange={() => setYoyaklistSpoilerOption("포함")}
+                                    onChange={() => handleSpoilerOptionChange("포함")}
                                 />
                                 포함
                             </label>
@@ -98,7 +108,7 @@ const YoyakList = () => {
                                     name="yoyaklistSpoiler"
                                     value="미포함"
                                     checked={yoyaklistSpoilerOption === "미포함"}
-                                    onChange={() => setYoyaklistSpoilerOption("미포함")}
+                                    onChange={() => handleSpoilerOptionChange("미포함")}
                                 />
                                 미포함
                             </label>
@@ -106,7 +116,7 @@ const YoyakList = () => {
                     </div>
                 </div>
 
-                <div className="yoyaklist-line"></div>  {/* 추가한 가로선 div */}
+                <div className="yoyaklist-line"></div>
 
                 <div className="yoyaklist-genre-container">
                     {yoyaklistCategories.map((category, index) => (

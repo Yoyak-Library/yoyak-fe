@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../assets/css/onboarding2.css'; // CSS 파일 이름도 변경 필요할 수 있음
+import '../../assets/css/onboarding2.css';
 
-const categories = {
+interface Categories {
+  [key: string]: string[];
+}
+
+const categories: Categories = {
   분위기: ['가벼운', '따뜻한', '감동적인', '진지한', '신나는', '감성적인', '편안한', '현실적인', '미래적인', '차분한', '긴장감 있는', '힐링되는', '스릴 있는', '소름 돋는']
 };
 
-const Onboarding2 = () => {
-  const [selected, setSelected] = useState([]);
+const Onboarding2: React.FC = () => {
+  const [selected, setSelected] = useState<string[]>([]);
   const navigate = useNavigate();
 
-  const handleCategoryClick = (category, item) => {
+  const handleCategoryClick = (category: string, item: string) => {
     const optionKey = `${category}:${item}`;
     setSelected((prevSelected) =>
       prevSelected.includes(optionKey)

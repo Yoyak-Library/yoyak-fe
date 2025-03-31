@@ -21,7 +21,7 @@
 }
 
 /*태블릿 화면*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .wrap {
         min-height: 1024px;
     }
@@ -38,8 +38,8 @@
     }
 
     .login-container {
-        top: 22%;
-        height: 522px;
+        top: 30%;
+        height: 566px;
     }
 
     .login-subtitle {
@@ -60,7 +60,7 @@
 
     .login-container {
         top: 50%;
-        height: 480px;
+        height: 566px;
     }
 
     .login-subtitle {
@@ -77,11 +77,13 @@
 
 .login-title {
     font-size: 3.2em;
+    font-weight: 600;
 }
 
 .login-subtitle {
     font-size: 1.6em;
     color: #767676;
+    font-weight: 500;
 }
 
 .login-content {
@@ -91,9 +93,10 @@
 }
 
 .login-content-name {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #767676;
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .login-content-input {
@@ -106,7 +109,13 @@
     margin-bottom: 5px;
     outline: none;
     box-sizing: border-box;
+    font-weight: 500;
 }
+
+.login-content-input::placeholder {
+    color: var(--Gray-30, #B8B8B8);
+}
+
 
 .login-content-input[type=text]:focus,
 .login-content-input[type=password]:focus {
@@ -142,10 +151,29 @@
     cursor: pointer;
 }
 
-/* .login-submit:hover {
-    box-shadow: 0 0 3px #5D91FE;
-    transition: all 0.2s;
-} */
+.login-submit-kakao {
+    margin: auto;
+    margin-top: 16px;
+    font-size: 1.6em;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #FEE500;
+    color: #F5F7FA;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    color: #191919;
+    position: relative;
+}
+
+.login-submit-kakao img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+}
 
 .login-signup {
     margin: auto;
@@ -155,8 +183,18 @@
     color: #B1B1B1;
 }
 
-.login-signup a {
+.login-signup a,
+.login-find a {
     margin-left: 12px;
     text-decoration: underline;
     color: #333333;
+}
+
+.login-find {
+    margin: auto;
+    margin-top: 16px;
+    font-size: 1.6em;
+    text-align: center;
+    color: #B1B1B1;
+    white-space: nowrap;
 }

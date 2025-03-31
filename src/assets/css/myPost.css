@@ -1,0 +1,223 @@
+.myPost {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    min-width: 800px;
+}
+
+.myPost-container {
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.myPost-pageName {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    gap: 16px;
+    top: 81px;
+}
+
+.myPost-pageName img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.myPost-menu {
+    position: absolute;
+    display: flex;
+    top: 137px;
+    left: 8px;
+    gap: 16px;
+}
+
+.myPost-menu-btn {
+    display: flex;
+    height: 32px;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--Gray-10, #F3F3F3);
+    color: var(--Black, #333);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 28px;
+    cursor: pointer;
+}
+
+.myPost-menu-btn.active {
+    background: var(--Blue-100, #5D91FE);
+    color: var(--White, #FFF);
+    font-weight: 600;
+}
+
+.myPost-sorts {
+    position: absolute;
+    top: 187px;
+    right: 0px;
+}
+
+.myPost-sort {
+    position: relative;
+}
+
+.myPost-sort-btn {
+    border-radius: 4px;
+    border: 1px solid var(--Blue-10, #DBE7FF);
+    background: var(--White, #FFF);
+    color: var(--Black, #333);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    width: 98px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.myPost-sort-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.myPost-sort-drop {
+    width: 143px;
+    height: 140px;
+    border-radius: 8px;
+    background: var(--White, #FFF);
+    position: absolute;
+    top: 43px;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.myPost-sort-content {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.myPost-sort-content img {
+    width: 16px;
+    height: 16px;
+    margin-left: 21px;
+    margin-right: 15px;
+    opacity: 0;
+}
+
+.myPost-sort-content.active {
+    color: var(--Blue-100, #5D91FE);
+}
+
+.myPost-sort-content.active img {
+    opacity: 1;
+}
+
+.myPost-cards {
+    position: relative;
+    top: 265px;
+}
+
+.myPost-cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 가로 3개 */
+    grid-template-rows: repeat(5, auto);
+    /* 세로 5개 */
+    gap: 0px 16px;
+}
+
+.myPost-card {
+    width: 256px;
+    height: 196px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.04);
+    color: var(--Black, #333);
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.myPost-card img {
+    width: 100%;
+    height: 102px;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.myPost-card-title {
+    font-size: 12px;
+    margin: 16px 20px 4px 20px;
+}
+
+.myPost-card-name {
+    font-size: 16px;
+    margin: 0px 20px 9px 20px;
+}
+
+.myPost-card-rest {
+    color: #D8D8D8;
+    display: flex;
+    font-size: 12px;
+    margin: 0px 20px;
+    font-weight: 300;
+}
+
+.myPost-card-num,
+.myPost-card-time {
+    color: var(--Black, #333);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.myPost-paginations {
+    position: relative;
+    width: 244px;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.myPost-pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myPost-pagination img {
+    width: 28px;
+    height: 28px;
+}
+
+.myPost-pagination-num {
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: var(--radius-small, 4px);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--Gray-40, #989898);
+    margin-bottom: 113px;
+    cursor: pointer;
+}
+
+.myPost-pagination-num.active {
+    background: var(--Gray-10, #F3F3F3);
+    color: var(--Black, #333);
+}

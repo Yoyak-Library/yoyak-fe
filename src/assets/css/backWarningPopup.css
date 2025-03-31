@@ -1,0 +1,59 @@
+.back-warning-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.back-warning-popup-content {
+    width: 440px;
+    height: 537px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.back-warning-popup-alert {
+    font-size: 17px;
+    color: red;
+    font-weight: bold;
+}
+
+.back-warning-popup-message {
+    font-size: 17px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.back-warning-popup-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.back-warning-popup-confirm {
+    background-color: #EAF1FF;
+    color: #4A7FEF;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-warning-popup-cancel {
+    background-color: #f3f3f3;
+    color: #767676;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

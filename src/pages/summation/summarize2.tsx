@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Menu from "../../components/menu";
 import WarningBox from "../../components/warningbox";
+import Dropdown from "../../components/dropdown";
 
 import "../../assets/css/summarize2.css";
 
-const Summarize2 = () => {
-    const [summary, setSummary] = useState("");
+const Summarize2: React.FC = () => {
+    const [summary, setSummary] = useState<string>("");
     const navigate = useNavigate();
 
-    const handleSummaryChange = (event) => {
+    const handleSummaryChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setSummary(event.target.value);
     };
 
@@ -21,18 +22,21 @@ const Summarize2 = () => {
                 <p className="summarize2-subtitle">더글로리 요약하기</p>
 
                 <div className="summarize2-box">
-                    <textarea 
-                        id="summary" 
-                        className="summarize2-input-box" 
-                        placeholder="내용을 입력해주세요" 
-                        value={summary} 
-                        onChange={handleSummaryChange} 
+                    <div className="viewYoyak-dropdownPosition">
+                        <Dropdown />
+                    </div>
+                    <textarea
+                        id="summary"
+                        className="summarize2-input-box"
+                        placeholder="내용을 입력해주세요"
+                        value={summary}
+                        onChange={handleSummaryChange}
                     />
                     <div className="summarize2-button-wrapper">
                         <div className="summarize2-button-container">
                             <div className="summarize2-left-button">
-                                <button 
-                                    className="summarize2-back-button" 
+                                <button
+                                    className="summarize2-back-button"
                                     onClick={() => navigate("/summarize1")}
                                 >뒤로 가기</button>
                             </div>
@@ -43,6 +47,7 @@ const Summarize2 = () => {
                         </div>
                     </div>
                 </div>
+
                 <WarningBox />
             </div>
         </div>

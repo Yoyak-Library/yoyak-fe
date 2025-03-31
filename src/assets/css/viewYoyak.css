@@ -1,0 +1,441 @@
+.viewYoyak-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 72px;
+    cursor: pointer;
+}
+
+.viewYoyak-title a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.viewYoyak-subtitle {
+    color: #7C7C7C;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.viewYoyak-view {
+    width: 100%;
+    height: 690px;
+    border-radius: 8px;
+    background: var(--BackGround, #F5F7FA);
+    margin-top: 8px;
+    padding: 24px 24px 0px 24px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 28px;
+}
+
+.viewYoyak-profile {
+    display: flex;
+    height: 40px;
+}
+
+.viewYoyak-profile img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.viewYoyak-nick {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.viewYoyak-time {
+    color: #A6A6A6;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.viewYoyak-dropdownName {
+    position: absolute;
+    top: 88px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.viewYoyak-dropdown {
+    width: 752px;
+    height: 40px;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--White, #FFF);
+    display: flex;
+    align-items: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.viewYoyak-dropdown img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.viewYoyak-dropdown-episode {
+    color: #2969F0;
+}
+
+.viewYoyak-dropdown-episodes {
+    position: absolute;
+    top: 43px;
+    width: 127px;
+    max-height: 260px;
+    overflow-y: auto;
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.04);
+    z-index: 1;
+}
+
+.viewYoyak-dropdown-episodes::-webkit-scrollbar {
+    width: 6px;
+}
+
+.viewYoyak-dropdown-episodes::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+.viewYoyak-dropdown-episodes::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.viewYoyak-dropdown-num {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    color: var(--Black, #333);
+    font-size: 16px;
+    font-weight: 500;
+    gap: 8px;
+}
+
+.viewYoyak-dropdown-num input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+}
+
+.viewYoyak-dropdown-num span{
+    padding-top: 4px;
+}
+
+.viewYoyak-dropdownbar {
+    position: absolute;
+}
+
+.viewYoyak-dropdownPosition {
+    position: absolute;
+    top: 136px;
+}
+
+.viewYoyak-content {
+    position: absolute;
+    top: 196px;
+    padding: 0px 40px;
+    color: var(--Black, #333);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 125%;
+    max-height: 440px;
+    overflow-y: auto;
+}
+
+
+.viewYoyak-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.viewYoyak-content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+.viewYoyak-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.viewYoyak-comment {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.viewYoyak-comment-write {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    height: 154px;
+    border-radius: 8px;
+    border: 2px solid var(--BackGround, #F5F7FA);
+    padding: 16px;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+    font-size: 15px;
+    font-weight: 400;
+    resize: none;
+    font-family: Pretendard;
+}
+
+.viewYoyak-comment-write::placeholder {
+    color: var(--Gray-60, #767676);
+}
+
+.viewYoyak-comment-write:focus {
+    outline: none;
+}
+
+
+.viewYoyak-comment-registration {
+    position: absolute;
+    top: 128px;
+    right: 15px;
+    width: 105px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 8px;
+    background: var(--BackGround, #F5F7FA);
+    color: var(--Blue-100, #5D91FE);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.viewYoyak-comment-sort {
+    position: absolute;
+    top: 198px;
+    left: 24px;
+}
+
+.viewYoyak-comment-rank {
+    width: 120px;
+    height: 34px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7E7E7E;
+    justify-content: space-between
+}
+
+.viewYoyak-comment-popular,
+.viewYoyak-comment-regist {
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.viewYoyak-comment-rank #active {
+    color: #202020;
+    border-bottom: 1px solid #5D91FE;
+}
+
+.viewYoyak-comment-content {
+    position: absolute;
+    top: 228px;
+    left: 23px;
+}
+
+.comment {
+    width: 777px;
+    height: auto;
+    position: relative;
+    margin-top: 32px;
+}
+
+.comment-profile {
+    display: flex;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.comment-profile img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.comment-nick {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.comment-time {
+    color: #A6A6A6;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.comment-content {
+    width: 100%;
+    padding: 0px 48px;
+    box-sizing: border-box;
+    color: var(--Black, #333);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.comment-bottom {
+    display: flex;
+    gap: 8px;
+}
+
+.comment-thumbs,
+.comment-reply {
+    display: flex;
+    align-items: center;
+    color: #797979;
+    font-size: 15px;
+    font-weight: 400;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.comment-thumbs img,
+.comment-reply img {
+    width: 24px;
+    height: 24px;
+}
+
+.reply {
+    width: 777px;
+    height: auto;
+    position: relative;
+    display: flex;
+    margin-top: 16px;
+}
+
+.reply-img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.viewYoyak-heart {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+    color: #535353;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.viewYoyak-heart img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.viewYoyak-highlight {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 2px 5.5px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    position: absolute;
+    bottom: 100px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.viewYoyak-highlight img {
+    width: 32px;
+    height: 32px;
+    margin: auto;
+}
+
+.viewYoyak-highlight-colors {
+    display: inline-flex;
+    width: 196px;
+    height: 36px;
+    align-items: center;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 2px 5.5px 0px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    bottom: 106px;
+    right: 80px;
+    padding: 0px 16px;
+    justify-content: space-between;
+}
+
+.viewYoyak-highlight-item {
+    position: relative;
+}
+
+.viewYoyak-highlight-blank {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.viewYoyak-highlight-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.viewYoyak-highlight-colors #blue,
+.viewYoyak-highlight-blue {
+    background-color: #80A9FE;
+}
+
+.viewYoyak-highlight-colors #yellow,
+.viewYoyak-highlight-yellow {
+    background-color: #FFE062;
+}
+
+.viewYoyak-highlight-colors #red,
+.viewYoyak-highlight-red {
+    background-color: #FF9292;
+}
+
+.viewYoyak-highlight-colors #green,
+.viewYoyak-highlight-green {
+    background-color: #9CFF93;
+}
+
+.viewYoyak-highlight-colors #purple,
+.viewYoyak-highlight-purple {
+    background-color: #BB8FF3;
+}

@@ -1,29 +1,29 @@
-/* 화면 전체 배경 흰색 설정 */
+
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* 전체 배경 흰색 */
-    color: #333333; /* 글자 색상 */
+    background-color: #ffffff; 
+    color: #333333; 
     font-family: 'Pretendard', sans-serif;
-    height: 100%; /* 화면 전체 높이 */
+    height: 100%; 
   }
   
   .Onboarding1 {
     text-align: center;
     padding: 20px;
-    background-color: #ffffff; /* 배경 흰색 */
-    color: #333333; /* 글자색 #333333 */
-    min-height: 100vh; /* 화면 전체 높이 채움 */
+    background-color: #ffffff; 
+    color: #333333;
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 세로 중앙 정렬 */
-    align-items: center; /* 가로 중앙 정렬 */
-    box-sizing: border-box; /* 여백 포함 계산 */
+    justify-content: center; 
+    align-items: center; 
+    box-sizing: border-box; 
   }
   
   .progress-bar {
     width: 100%;
-    max-width: 600px; /* 진행 바 최대 너비 */
+    max-width: 600px; 
     height: 8px;
     background-color: #f5f7fa;
     border-radius: 4px;
@@ -43,37 +43,37 @@ body, html {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 내용 중앙 정렬 */
+    align-items: center; 
   }
   
   h1 {
     font-size: 24px;
     margin-bottom: 10px;
-    text-align: left; /* 왼쪽 정렬 */
+    text-align: left; 
   }
   
   .content .header {
     display: flex;
-    justify-content: space-between; /* 텍스트와 버튼을 양 끝에 배치 */
-    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: space-between; 
+    align-items: center; 
     width: 100%;
   }
   
   .skip-button {
     background: none;
     border: none;
-    color: #333333; /* 색상 */
-    font-size: 12px; /* 글자 크기 축소 */
-    padding: 2px 5px; /* 패딩 축소 */
+    color: #333333;
+    font-size: 12px;
+    padding: 2px 5px; 
     margin-bottom: 20px;
     cursor: pointer;
     text-align: right;
-    width: 120px; /* 버튼 너비 축소 */
-    height: 120px; /* 버튼 높이 축소 */
+    width: 120px; 
+    height: 120px; 
   }
   
   .skip-button img {
-    width: 100%; /* 이미지를 버튼 크기에 맞게 조정 */
+    width: 100%; 
     height: auto;
   }
   
@@ -83,7 +83,7 @@ body, html {
   }
   
   .category {
-    margin-bottom: 50px; /* 카테고리 사이 간격 증가 */
+    margin-bottom: 50px; 
   }
   
   .category h2 {
@@ -104,7 +104,7 @@ body, html {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 14px;
-    color: #333333; /* 글자색 #333333 */
+    color: #333333; 
   }
   
   .option.selected {
@@ -116,12 +116,12 @@ body, html {
     background-color: #f5f7fa;
     border: none;
     border-radius: 8px;
-    padding: 10px 30px; /* 버튼 길이 증가 */
+    padding: 10px 30px; 
     font-size: 16px;
     cursor: pointer;
-    color: #333333; /* 글자색 #333333 */
+    color: #333333; 
     transition: background-color 0.3s ease;
-    margin-left: auto; /* 오른쪽 정렬 */
+    margin-left: auto; 
   }
   
   .next-button.active {

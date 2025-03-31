@@ -5,7 +5,7 @@ import Logo from '../assets/images/yoyaklery_logo.png';
 import Profile from '../assets/images/ic_profile_img.png';
 import Alarm from '../assets/images/ic_bell_32.svg';
 
-const Menu = () => {
+const Menu: React.FC = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -22,7 +22,10 @@ const Menu = () => {
                         id="summary" onClick={() => navigate('/yoyak')} >
                         요약
                     </div>
-                    <div className='navi-first' id="library">개인라이브러리</div>
+                    <div className={`navi-first ${['/personalLibrary'].includes(location.pathname) ? 'active' : ''}`}
+                        id="personalLibrary" onClick={() => navigate('/personalLibrary')} >
+                        개인라이브러리
+                    </div>
                 </div>
                 <div className="navi-button2">
                     <img src={Alarm} className='navi-second' id='alarm' alt="alarm" />

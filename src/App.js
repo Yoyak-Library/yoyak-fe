@@ -2,12 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/login';
 import SignUp from './pages/login/signup';
+import FindAccount from './pages/login/findAccount';
 import Home from './pages/home/home';
-import Yoyak from './pages/home/yoyak';
+import Yoyak from './pages/yoyak/yoyak';
+import ViewYoyak from './pages/yoyak/viewYoyak';
 import OneReview from './pages/home/oneReview';
 import Onboarding1 from './pages/onboarding/onboarding1';  
 import Onboarding2 from './pages/onboarding/onboarding2';  
 import Loading from './pages/onboarding/loading';
+import MyPost from './pages/library/myPost';
 import YoyakList from './pages/home/yoyaklist';
 import Summarize1 from './pages/summation/summarize1';
 import Summarize2 from './pages/summation/summarize2';
@@ -26,13 +29,20 @@ function App() {
         <Route path="/" element={<Login />} />
         {/* 회원가입 */}
         <Route path="/signup" element={<SignUp />} />
+        {/* 아이디/패스워드 찾기 */}
+        <Route path="/findAccount" element={<FindAccount />} />
         {/* 홈 */}
         <Route path="/home" element={<Home />} />
         {/* 요약 */}
         <Route path="/yoyak" element={<Yoyak />} />
+        {/* 요약글 보기 */}
+        <Route path="/viewYoyak" element={<ViewYoyak />} />
+        {/* 내가 작성한 글 */}
+        <Route path="/myPost" element={<MyPost />} />
         <Route path="/yoyaklist" element={<YoyakList />} />
 
         <Route path="/review" element={<OneReview />} />
+        
         {/* 온보딩*/}
         <Route path="/onboarding1" element={<Onboarding1 />} />
         <Route path="/onboarding2" element={<Onboarding2 />} />

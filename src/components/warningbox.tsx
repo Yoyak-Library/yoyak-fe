@@ -2,11 +2,16 @@ import React from "react";
 import warningIcon from "../../src/assets/images/ic_warning.png"; // 이미지 추가
 import "../../src/assets/css/warningbox.css";
 
-const WarningBox = () => {
+// 경고 박스 컴포넌트
+const WarningBox: React.FC = () => {
     return (
         <div className="warning-box">
             <div className="warning-header">
-                <img src={warningIcon} alt="경고 아이콘" className="warning-icon" />
+                <img 
+                    src={warningIcon} 
+                    alt="경고 아이콘" 
+                    className="warning-icon" 
+                />
                 <p className="warning-text">요약글을 작성하실 때 주의해주시기 바랍니다.</p>
             </div>
             <ul className="warning-list">

@@ -30,7 +30,7 @@ const PersonalLibrary = () => {
                         <input type="file" id="profile-upload" accept="image/*" style={{ display: "none" }} onChange={handleImageUpload} />
                     </div>
                     <div className="personallibrary_profile-info">
-                        <h2 className="personallibrary_profile-name">김슈슈니</h2>
+                        <h2 className="personallibrary_profile-name">김슈니</h2>
                         <p className="personallibrary_profile-email">abcd12@naver.com</p>
                     </div>
                 </div>
@@ -40,26 +40,11 @@ const PersonalLibrary = () => {
                     <button className="personallibrary_stat-box"><span className="personallibrary_stat-number">5</span><span className="personallibrary_stat-text">찜</span></button>
                 </div>
                 <hr className="personallibrary_separator" />
-                <p className="personallibrary_analysis-text">김수니님의 요약리뷰를 바탕으로 취향을 분석해 보았어요.</p>
+                <p className="personallibrary_analysis-text">김슈니님의 요약리뷰를 바탕으로 취향을 분석해 보았어요.</p>
                 <div className="personallibrary_summary-tag">
-                    <p className="personallibrary_summary-text">스릴을 즐기는 독서러버</p>
-                    <span className="personallibrary_summary-hashtags">#현실적인 #탄탄한 #무속적인</span>
-                </div>
-                <div className="personallibrary_chart-section">
-                    <div className="personallibrary_chart-circle">
-                        <div className="personallibrary_chart-percentage">SF 36%</div>
-                    </div>
-                    <div className="personallibrary_genre-tags">
-                        <div>
-                            <span className="personallibrary_genre personallibrary_sf">SF</span>
-                            <span className="personallibrary_genre personallibrary_history">사극</span>
-                            <span className="personallibrary_genre personallibrary_horror">공포</span>
-                        </div>
-                        <div>
-                            <span className="personallibrary_genre personallibrary_drama">드라마</span>
-                            <span className="personallibrary_genre personallibrary_romance">로맨스</span>
-                            <span className="personallibrary_genre personallibrary_music">음악</span>
-                        </div>
+                    <div className="personallibrary_summary-text-box">
+                        <p className="personallibrary_summary-text">스릴을 즐기는 독서러버</p>
+                        <p className="personallibrary_summary-hashtags">#현실적인 #탄탄한 #무속적인</p>
                     </div>
                 </div>
             </div>
