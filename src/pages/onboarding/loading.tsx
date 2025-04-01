@@ -11,7 +11,7 @@ const Loading: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 3초 후 로딩 완료
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
