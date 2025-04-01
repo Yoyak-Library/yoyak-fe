@@ -31,6 +31,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         {/* 아이디/패스워드 찾기 */}
         <Route path="/findAccount" element={<FindAccount />} />
+        {/* 아이디/패스워드 찾기 */}
+        <Route path="/findAccount" element={<FindAccount />} />
         {/* 홈 */}
         <Route path="/home" element={<Home />} />
         {/* 요약 */}
