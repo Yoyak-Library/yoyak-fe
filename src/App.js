@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/login';
 import SignUp from './pages/login/signup';
 import FindAccount from './pages/login/findAccount';
+import FindAccount from './pages/login/findAccount';
 import Home from './pages/home/home';
+import Yoyak from './pages/yoyak/yoyak';
+import ViewYoyak from './pages/yoyak/viewYoyak';
 import Yoyak from './pages/yoyak/yoyak';
 import ViewYoyak from './pages/yoyak/viewYoyak';
 import OneReview from './pages/home/oneReview';
@@ -15,6 +18,7 @@ import YoyakList from './pages/home/yoyaklist';
 import Summarize1 from './pages/summation/summarize1';
 import Summarize2 from './pages/summation/summarize2';
 import PersonalLibrary from './pages/home/personalLibrary';
+import MyPost from './pages/library/myPost';
 
 function App() {
   return (
@@ -42,6 +46,10 @@ function App() {
         {/* 내가 작성한 글 */}
         <Route path="/myPost" element={<MyPost />} />
         <Route path="/yoyaklist" element={<YoyakList />} />
+        {/* 요약글 보기 */}
+        <Route path="/viewYoyak" element={<ViewYoyak />} />
+        {/* 내가 작성한 글 */}
+        <Route path="/myPost" element={<MyPost />} />
 
         <Route path="/review" element={<OneReview />} />
         
