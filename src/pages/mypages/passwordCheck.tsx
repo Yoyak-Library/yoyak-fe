@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Menu from "../../components/menu";
 import openEyeIcon from "../../assets/images/password_eye_on.png";
 import closeEyeIcon from "../../assets/images/password_eye_off.png";
+import backArrowIcon from "../../assets/images/back_arrow.png";
 
 import "../../assets/css/passwordCheck.css";
 
@@ -25,7 +26,12 @@ const PasswordCheck = () => {
             <Menu />
             <div className="passwordcheck_container">
                 <div className="passwordcheck_header">
-                    <span className="passwordcheck_back" onClick={handleBack}>&lt;</span>
+                    <img
+                        src={backArrowIcon}
+                        alt="뒤로가기"
+                        className="passwordcheck_back"
+                        onClick={handleBack}
+                    />
                     <h2 className="passwordcheck_title">회원정보</h2>
                 </div>
 
@@ -52,10 +58,12 @@ const PasswordCheck = () => {
                         <p className="passwordcheck_error">안내메시지</p>
                     </div>
 
-                    <button className={`passwordcheck_button ${password ? "active" : ""}`} disabled={!password}>
+                    <button
+                        className={`passwordcheck_button ${password ? "active" : ""}`}
+                        disabled={!password}
+                    >
                         다음
                     </button>
-
                 </div>
             </div>
         </div>

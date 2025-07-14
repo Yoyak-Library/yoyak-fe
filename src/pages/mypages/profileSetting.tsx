@@ -5,6 +5,8 @@ import Menu from "../../components/menu";
 import ConfirmModal from "../../components/confirmModal";
 import defaultProfileImage from "../../assets/images/default_summary.png";
 import editIcon from "../../assets/images/btn_edit.png";
+import backArrowIcon from "../../assets/images/back_arrow.png";
+import nextArrowIcon from "../../assets/images/next_arrow.png";
 
 import "../../assets/css/profileSetting.css";
 
@@ -35,7 +37,12 @@ const ProfileSetting = () => {
             <Menu />
             <div className="profilesetting_container">
                 <div className="profilesetting_header">
-                    <span className="profilesetting_back" onClick={handleBack}>&lt;</span>
+                    <img
+                        src={backArrowIcon}
+                        alt="뒤로가기"
+                        className="profilesetting_back"
+                        onClick={handleBack}
+                    />
                     <h2 className="profilesetting_title">설정</h2>
                 </div>
 
@@ -54,7 +61,11 @@ const ProfileSetting = () => {
                         onClick={handlePasswordCheck}
                     >
                         <span className="profilesetting_section-title strong">회원정보</span>
-                        <span className="profilesetting_arrow">&gt;</span>
+                        <img
+                            src={nextArrowIcon}
+                            alt="다음"
+                            className="profilesetting_arrow"
+                        />
                     </div>
 
                     <div className="profilesetting_info-box">
@@ -81,6 +92,7 @@ const ProfileSetting = () => {
                 </div>
             </div>
 
+            {/* ✅ 탈퇴 확인 모달 */}
             {showDeleteModal && (
                 <ConfirmModal
                     message={`정말 회원을 탈퇴하시겠습니까?\n이 선택은 되돌릴 수 없으며, 작성한 게시글은 모두 삭제됩니다.`}

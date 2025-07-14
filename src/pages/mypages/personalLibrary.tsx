@@ -1,12 +1,14 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import Menu from "../../components/menu";
+import DonutChart from "../../components/donutChart";
 import defaultProfileImage from "../../assets/images/default_summary.png";
 import settingsIcon from "../../assets/images/uil_setting.png";
-import "../../assets/css/personalLibrary.css";
-import DonutChart from "../../components/donutChart";
 
-const PersonalLibrary = () => {
+import "../../assets/css/personalLibrary.css";
+
+const PersonalLibrary: React.FC = () => {
     const navigate = useNavigate();
 
     const goToProfileSetting = () => {

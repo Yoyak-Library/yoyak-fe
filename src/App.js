@@ -11,12 +11,13 @@ import Onboarding1 from './pages/onboarding/onboarding1';
 import Onboarding2 from './pages/onboarding/onboarding2';  
 import Loading from './pages/onboarding/loading';
 import MyPost from './pages/library/myPost';
-import YoyakList from './pages/home/yoyaklist';
+import YoyakList from './pages/yoyak/yoyaklist';
 import Summarize1 from './pages/summation/summarize1';
 import Summarize2 from './pages/summation/summarize2';
 import PersonalLibrary from './pages/mypages/personalLibrary';
 import ProfileSetting from './pages/mypages/profileSetting';
 import PasswordCheck from './pages/mypages/passwordCheck';
+import HighlightView from './pages/yoyak/highlightView';
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
         <Route path="/yoyaklist" element={<YoyakList />} />
 
         <Route path="/review" element={<OneReview />} />
+
+        <Route path="/highlightview" element={<HighlightView />} />
         
         {/* 온보딩*/}
         <Route path="/onboarding1" element={<Onboarding1 />} />
@@ -54,7 +57,7 @@ function App() {
         <Route path="/summarize1" element={<Summarize1 />} />
         <Route path="/summarize2" element={<Summarize2 />} />
 
-        {/* 라이브러리 */}
+        {/* 개인 라이브러리 */}
         <Route path="/personallibrary" element={<PersonalLibrary />} />
         <Route path="/profilesetting" element={<ProfileSetting />} />
         <Route path="/passwordcheck" element={<PasswordCheck />} />
