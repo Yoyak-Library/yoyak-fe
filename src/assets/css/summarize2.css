@@ -120,3 +120,8 @@ input[type="radio"]:checked {
     background-color: #5D91FE; 
     border-color: #5D91FE; 
 }
+
+.summarize2-submit-button.active {
+    background-color: #5D91FE;
+    color: #FFFFFF;
+}

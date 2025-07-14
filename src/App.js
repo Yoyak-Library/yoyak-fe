@@ -14,7 +14,9 @@ import MyPost from './pages/library/myPost';
 import YoyakList from './pages/home/yoyaklist';
 import Summarize1 from './pages/summation/summarize1';
 import Summarize2 from './pages/summation/summarize2';
-import PersonalLibrary from './pages/home/personalLibrary';
+import PersonalLibrary from './pages/mypages/personalLibrary';
+import ProfileSetting from './pages/mypages/profileSetting';
+import PasswordCheck from './pages/mypages/passwordCheck';
 
 function App() {
   return (
@@ -54,6 +56,9 @@ function App() {
 
         {/* 라이브러리 */}
         <Route path="/personallibrary" element={<PersonalLibrary />} />
+        <Route path="/profilesetting" element={<ProfileSetting />} />
+        <Route path="/passwordcheck" element={<PasswordCheck />} />
+
 
       </Routes>
     </Router>

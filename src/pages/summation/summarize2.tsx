@@ -9,7 +9,7 @@ import "../../assets/css/summarize2.css";
 
 const Summarize2: React.FC = () => {
     const [summary, setSummary] = useState<string>("");
-    const [showModal, setShowModal] = useState<boolean>(false); // ✅ 모달 상태 관리
+    const [showModal, setShowModal] = useState<boolean>(false); 
     const navigate = useNavigate();
 
     const handleSummaryChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -17,12 +17,12 @@ const Summarize2: React.FC = () => {
     };
 
     const handleGoBack = () => {
-        setShowModal(true); // 뒤로 가기 버튼 클릭 시 모달 열기
+        setShowModal(true); 
     };
 
     const handleConfirmGoBack = () => {
-        setShowModal(false); // 모달 닫고
-        navigate("/summarize1"); // 페이지 이동
+        setShowModal(false); 
+        navigate("/summarize1"); 
     };
 
     return (
@@ -55,7 +55,11 @@ const Summarize2: React.FC = () => {
                             </div>
                             <div className="summarize2-right-buttons">
                                 <button className="summarize2-temp-save-button">임시 저장</button>
-                                <button className="summarize2-submit-button">등록하기</button>
+                                <button
+                                    className={`summarize2-submit-button ${summary.trim() ? "active" : ""}`}
+                                >
+                                    등록하기
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -64,7 +68,6 @@ const Summarize2: React.FC = () => {
                 <WarningBox />
             </div>
 
-            {/* ✅ 모달 표시 조건 */}
             {showModal && (
                 <ConfirmModal
                     message={`뒤로 가기를 누르시면\n현재 입력되었던 본문 내용은 모두 삭제됩니다.`}
