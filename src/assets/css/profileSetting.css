@@ -79,7 +79,7 @@
   display: flex;
   justify-content: space-between;
   width: 528px;
-  margin: 0 auto 0px auto; /* 아래 간격만 살짝 주기 */
+  margin: 0 auto 0px auto; 
   align-items: center;
 }
 

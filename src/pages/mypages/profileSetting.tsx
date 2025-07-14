@@ -92,7 +92,6 @@ const ProfileSetting = () => {
                 </div>
             </div>
 
-            {/* ✅ 탈퇴 확인 모달 */}
             {showDeleteModal && (
                 <ConfirmModal
                     message={`정말 회원을 탈퇴하시겠습니까?\n이 선택은 되돌릴 수 없으며, 작성한 게시글은 모두 삭제됩니다.`}

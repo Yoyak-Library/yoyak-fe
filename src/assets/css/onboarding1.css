@@ -1,12 +1,7 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; 
-    color: #333333; 
-    font-family: 'Pretendard', sans-serif;
-    height: 100%; 
-  }
+.Onboarding_Onboarding1{
+    width: 800px;
+    margin: auto;
+}
   
   .Onboarding1 {
     text-align: center;

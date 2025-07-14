@@ -1,11 +1,6 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333333; 
-    font-family: 'Pretendard', sans-serif;
-    height: 100%;
+.Onboarding_Onboarding2{
+    width: 800px;
+    margin: auto;
 }
 
 .Onboarding2 {
@@ -25,7 +20,8 @@ body, html {
     width: 100%;
     max-width: 600px; 
     height: 8px;
-    background-color: #5d91fe; 
+    background-color: #f5f7fa;
+    border-radius: 4px;
     margin-bottom: 20px;
     position: relative;
 }
