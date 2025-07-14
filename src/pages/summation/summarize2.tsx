@@ -3,15 +3,26 @@ import { useNavigate } from "react-router-dom";
 import Menu from "../../components/menu";
 import WarningBox from "../../components/warningbox";
 import Dropdown from "../../components/dropdown";
+import ConfirmModal from "../../components/confirmModal";
 
 import "../../assets/css/summarize2.css";
 
 const Summarize2: React.FC = () => {
     const [summary, setSummary] = useState<string>("");
+    const [showModal, setShowModal] = useState<boolean>(false); // ✅ 모달 상태 관리
     const navigate = useNavigate();
 
     const handleSummaryChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setSummary(event.target.value);
+    };
+
+    const handleGoBack = () => {
+        setShowModal(true); // 뒤로 가기 버튼 클릭 시 모달 열기
+    };
+
+    const handleConfirmGoBack = () => {
+        setShowModal(false); // 모달 닫고
+        navigate("/summarize1"); // 페이지 이동
     };
 
     return (
@@ -19,7 +30,7 @@ const Summarize2: React.FC = () => {
             <Menu />
             <div className="summarize2-container">
                 <h1 className="summarize2-title">제목</h1>
-                <p className="summarize2-subtitle">더글로리 요약하기</p>
+                <p className="summarize2-subtitle">다른 사용자를 위해 내용을 요약해주세요.</p>
 
                 <div className="summarize2-box">
                     <div className="viewYoyak-dropdownPosition">
@@ -37,8 +48,10 @@ const Summarize2: React.FC = () => {
                             <div className="summarize2-left-button">
                                 <button
                                     className="summarize2-back-button"
-                                    onClick={() => navigate("/summarize1")}
-                                >뒤로 가기</button>
+                                    onClick={handleGoBack}
+                                >
+                                    뒤로 가기
+                                </button>
                             </div>
                             <div className="summarize2-right-buttons">
                                 <button className="summarize2-temp-save-button">임시 저장</button>
@@ -50,6 +63,14 @@ const Summarize2: React.FC = () => {
 
                 <WarningBox />
             </div>
+
+            {/* ✅ 모달 표시 조건 */}
+            {showModal && (
+                <ConfirmModal
+                    message={`뒤로 가기를 누르시면\n현재 입력되었던 본문 내용은 모두 삭제됩니다.`}
+                    onConfirm={handleConfirmGoBack}
+                />
+            )}
         </div>
     );
 };
