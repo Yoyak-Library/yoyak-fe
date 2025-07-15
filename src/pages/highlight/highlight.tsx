@@ -1,7 +1,7 @@
 import Menu from "../../components/menu";
 import { useState } from "react";
 import "../../assets/css/highlight.css";
-import HighlightCard from "../../components/highlightCard";
+import HighlightBoard from "../../components/highlightBoard";
 import FilterDropdown from "../../components/filterDropdown";
 
 const Highlight = () => {
@@ -26,7 +26,7 @@ const Highlight = () => {
 
         <div className="highlight__grid">
           {Array.from({ length: 10 }).map((_, index) => (
-            <HighlightCard key={index} />
+            <HighlightBoard key={index} />
           ))}
         </div>
 
