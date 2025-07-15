@@ -11,6 +11,7 @@ import Onboarding1 from './pages/onboarding/onboarding1';
 import Onboarding2 from './pages/onboarding/onboarding2';  
 import Loading from './pages/onboarding/loading';
 import MyPost from './pages/library/myPost';
+import Like from './pages/library/like';
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
         <Route path="/viewYoyak" element={<ViewYoyak />} />
         {/* 내가 작성한 글 */}
         <Route path="/myPost" element={<MyPost />} />
+        {/* 찜 */}
+        <Route path="like" element={<Like />} />
 
         <Route path="/review" element={<OneReview />} />
         {/* 온보딩*/}
