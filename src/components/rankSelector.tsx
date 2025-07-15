@@ -1,10 +1,15 @@
 import { useState } from "react";
-import '../assets/css/rankSelector.css'
+import "../assets/css/rankSelector.css";
 
-const RankSelector = () => {
-  const [selected, setSelected] = useState("popular");
+type Option = {
+  key: string;
+  label: string;
+};
 
-  const options = [
+const RankSelector: React.FC = () => {
+  const [selected, setSelected] = useState<string>("popular");
+
+  const options: Option[] = [
     { key: "popular", label: "인기순" },
     { key: "regist", label: "등록순" },
     { key: "suggest", label: "추천순" },

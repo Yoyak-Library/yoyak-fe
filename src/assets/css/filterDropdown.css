@@ -1,0 +1,67 @@
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+.filter-button {
+  padding: 6px 18px;
+  border: 1px solid #DBE7FF;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.triangle {
+  color: #5D91FE; 
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  z-index: 1000;
+  width: 120px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item .checkmark {
+  width: 16px; 
+  margin-right: 6px;
+  color: #5D91FE;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  visibility: hidden; 
+}
+
+.dropdown-item.selected .checkmark {
+  visibility: visible; 
+}
+
+.dropdown-item .item-text {
+  flex: 1;
+}
+
+.dropdown-item.selected .item-text {
+  color: #5D91FE;
+  font-weight: 600;
+}
