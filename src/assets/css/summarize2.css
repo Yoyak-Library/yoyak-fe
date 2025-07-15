@@ -1,0 +1,127 @@
+.summarize2-container {
+    width: 800px;
+    margin: auto;
+}
+
+.summarize2-box {
+    background-color: #fff;
+    border: 2px solid #bfd4ff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 800px;
+    height: 659px; 
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.summarize2-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.summarize2-subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #989898;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.summarize2-box-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.summarize2-input-box {
+    width: 96%;
+    height: 80%;
+    padding: 10px;
+    border: 1px solid #ffffff; 
+    font-size: 18px;
+    color: #333333;
+    background: transparent;
+    outline: none;
+    resize: none;
+    margin-top: 60px; 
+    font-family: 'Arial';
+}
+
+.summarize2-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summarize2-back-button {
+    background-color: #FFEAEA;
+    color: #FF0000;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.summarize2-temp-save-button {
+    background-color: #EAF1FF;
+    color: #4A7FEF;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.summarize2-submit-button {
+    background-color: #F3F3F3;
+    color: #767676;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.summarize2-right-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.summarize2-button-wrapper {
+    margin-top: auto;
+}
+
+.viewYoyak-dropdownPosition {
+    position: absolute; 
+    top: 15px; 
+    left: 15px; 
+}
+
+.viewYoyak-dropdown {
+    border: 1px solid #bfd4ff; 
+    width: 790px;
+}
+
+input[type="radio"] {
+    accent-color: #5D91FE;
+}
+
+input[type="radio"]:checked {
+    background-color: #5D91FE; 
+    border-color: #5D91FE; 
+}
+
+.summarize2-submit-button.active {
+    background-color: #5D91FE;
+    color: #FFFFFF;
+}

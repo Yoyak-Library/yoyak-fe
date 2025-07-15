@@ -1,0 +1,47 @@
+.highlightview_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.highlightview_header {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 5px;
+}
+
+.highlightview_back-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.highlightview_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 60px;
+  margin-bottom: 8px;
+}
+
+.highlightview_subtitle {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+}
+
+.highlightview_card-grid {
+  column-count: 3;        
+  column-gap: 16px;         
+}
+
+.highlightview_card {
+  display: inline-block;   
+  margin-bottom: 16px;    
+  width: 100%;              
+}
+

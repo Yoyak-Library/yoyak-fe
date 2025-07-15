@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../assets/css/onboarding1.css';
-import LaterButtonImage from '../../assets/images/Onboarding_Later_Button.png'; // 이미지 경로에 맞게 import
+import LaterButtonImage from '../../assets/images/Onboarding_Later_Button.png';
 
-const categories = {
+interface Categories {
+  [key: string]: string[];
+}
+
+const categories: Categories = {
   영화: ['애니메이션', '다큐멘터리', '액션', '로맨스', '코미디', '공포', '스릴러', 'SF', '판타지'],
   드라마: ['멜로', '미스터리', '코미디', '스릴러', '다큐멘터리', '범죄', '사극', '판타지', '일상', '로맨스'],
   TV프로그램: ['예능', '토크쇼', '다큐멘터리', '음악/오디션', '생존/서바이벌', '먹방', '리얼리티', '시사/뉴스', '스포츠', '여행'],
 };
 
-const Onboarding1 = () => {
-  const [selected, setSelected] = useState([]);
+const Onboarding1: React.FC = () => {
+  const [selected, setSelected] = useState<string[]>([]);
   const navigate = useNavigate();
 
-  const handleCategoryClick = (category, item) => {
+  const handleCategoryClick = (category: string, item: string) => {
     const optionKey = `${category}:${item}`;
     setSelected((prevSelected) =>
       prevSelected.includes(optionKey)
@@ -38,7 +42,7 @@ const Onboarding1 = () => {
             <br />
             관심이 있으신가요?
           </h1>
-          <button className="skip-button">
+          <button className="skip-button" onClick={() => navigate("/")}>
             <img src={LaterButtonImage} alt="나중에 하기" />
           </button>
         </div>

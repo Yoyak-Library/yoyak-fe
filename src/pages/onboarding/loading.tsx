@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { BounceLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
-import '../../assets/css/loading.css';
+import "../../assets/css/loading.css";
 import LoadingCompleteImage from "../../assets/images/Loading_complete.png";
 
-const Loading = () => {
-  const [loading, setLoading] = useState(true);
+const Loading: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 3초 후 로딩 완료
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);

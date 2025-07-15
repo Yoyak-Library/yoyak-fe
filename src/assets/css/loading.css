@@ -27,13 +27,17 @@
 .home-button {
     background-color: #5D91FE;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 150px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 .home-button:hover {
     background-color: #4A7FCC;
