@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "../assets/css/rankSelector.css";
+import '../assets/css/rankSelector.css'
 
-type Option = {
+interface Option {
   key: string;
   label: string;
-};
+}
 
 const RankSelector: React.FC = () => {
   const [selected, setSelected] = useState<string>("popular");

@@ -7,72 +7,31 @@
 }
 
 .login {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .login-img {
     background-color: #D9D9D9;
 }
 
-.login-img, .login-page {
+.login-img {
     display: flex;
-}
-
-/*태블릿 화면*/
-@media (max-width: 768px) {
-    .wrap {
-        min-height: 1024px;
-    }
-
-    .login {
-        flex-direction: column;
-    }
-
-    .login-img {
-        height: 40%;
-    }
-    .login-page {
-        height: 60%;
-    }
-
-    .login-container {
-        top: 30%;
-        height: 566px;
-    }
-
-    .login-subtitle {
-        margin-bottom: 88px;
-    }
-}
-
-/*pc 화면*/
-@media (min-width: 768px) {
-    .login {
-        flex-direction: row;
-    }
-
-    .login-img, .login-page {
-        flex: 1;
-        height: 100%;
-    }
-
-    .login-container {
-        top: 50%;
-        height: 566px;
-    }
-
-    .login-subtitle {
-        margin-bottom: 46px;
-    }
 }
 
 .login-container {
     position: relative;
+    top: 121px;
     width: 382px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+}
+
+.login-container a {
+    text-decoration: none;
+}
+
+.login-subtitle {
+    margin-bottom: 46px;
 }
 
 .login-title {

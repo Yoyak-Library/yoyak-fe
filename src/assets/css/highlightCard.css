@@ -1,0 +1,37 @@
+.highlightview_card {
+  width: 256px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  background-color: transparent;
+  white-space: pre-line;
+  box-sizing: border-box;
+}
+
+.highlightview_card.yellow {
+  border-color: #FFE062;
+}
+
+.highlightview_card.red {
+  border-color: #FF9292;
+}
+
+.highlightview_card.green {
+  border-color: #9CFF93;
+}
+
+.highlightview_episode-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.highlightview_episode-date .episode {
+  color: #333;
+}
+
+.highlightview_episode-date .date {
+  color: #989898;
+}

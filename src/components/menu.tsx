@@ -22,7 +22,10 @@ const Menu: React.FC = () => {
                         id="summary" onClick={() => navigate('/yoyak')} >
                         요약
                     </div>
-                    <div className={`navi-first ${['/check'].includes(location.pathname) ? 'active' : ''}`} id="library">개인라이브러리</div>
+                    <div className={`navi-first ${['/personalLibrary'].includes(location.pathname) ? 'active' : ''}`}
+                        id="personalLibrary" onClick={() => navigate('/personalLibrary')} >
+                        개인라이브러리
+                    </div>
                 </div>
                 <div className="navi-button2">
                     <img src={Alarm} className='navi-second' id='alarm' alt="alarm" />
