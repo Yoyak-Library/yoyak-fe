@@ -18,6 +18,7 @@ import PersonalLibrary from './pages/mypages/personalLibrary';
 import ProfileSetting from './pages/mypages/profileSetting';
 import PasswordCheck from './pages/mypages/passwordCheck';
 import HighlightView from './pages/yoyak/highlightView';
+import Like from './pages/library/like';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
         {/* 내가 작성한 글 */}
         <Route path="/myPost" element={<MyPost />} />
         <Route path="/yoyaklist" element={<YoyakList />} />
+        {/* 찜 */}
+        <Route path="like" element={<Like />} />
 
         <Route path="/review" element={<OneReview />} />
 

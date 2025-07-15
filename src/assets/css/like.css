@@ -1,0 +1,18 @@
+.like-sorts {
+    position: absolute;
+    top: 129px;
+    right: 0px;
+}
+
+.like-cards {
+    position: relative;
+    top: 180px;
+}
+
+.like-paginations {
+    position: relative;
+    width: 244px;
+    top: 242px;
+    left: 50%;
+    transform: translateX(-50%);
+}
