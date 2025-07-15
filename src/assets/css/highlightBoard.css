@@ -1,0 +1,102 @@
+.highlightBoard__wrap {
+    width: 392px;
+    height: 186px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+}
+
+.highlightBoard__top-container {
+    width: 391px;
+    height: 132px;
+    background-color: #fff; 
+    border: 1px #F3F3F3 solid;
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.highlightBoard__image-box {
+    width: 96px;
+    height: 100%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px 0 0 9px;
+}
+
+.highlightBoard__text-box {
+    flex: 1;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    gap: 3px; /* 요소 간 간격 */
+}
+
+.highlightBoard__content {
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.highlightBoard__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.highlightBoard__info-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #333;
+    margin: 3px 0 3px 0;
+}
+
+.highlightBoard__count {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.highlightBoard__count-number {
+  color: #5D91FE; 
+  font-weight: 500;
+}
+
+.highlightBoard__count-unit {
+  color: #333; 
+}
+
+
+.highlightBoard__divider {
+    color: #D8D8D8;
+}
+
+.highlightBoard__description {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+
+
+.highlightBoard__button {
+    width: 100%;
+    height: 38px;
+    margin-top: 16px;
+    background-color: #EAF1FF;
+    color: #5D91FE;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}

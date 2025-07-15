@@ -3,9 +3,18 @@ import thumbsup from "../assets/images/ic_thumbsup_24.svg";
 import filledthumbsup from "../assets/images/ic_filledthumbsup_24.svg";
 import "../assets/css/review.css";
 
-const Review = ({ profileImg, nickname, date, reviewText, initialLikes, rating }) => {
-    const [likes, setLikes] = useState(initialLikes);
-    const [liked, setLiked] = useState(false);
+interface ReviewProps {
+    profileImg: string;
+    nickname: string;
+    date: string;
+    reviewText: string;
+    initialLikes: number;
+    rating: number;
+}
+
+const Review: React.FC<ReviewProps> = ({ profileImg, nickname, date, reviewText, initialLikes, rating }) => {
+    const [likes, setLikes] = useState<number>(initialLikes);
+    const [liked, setLiked] = useState<boolean>(false);
 
     const handleLike = () => {
         setLiked(!liked);

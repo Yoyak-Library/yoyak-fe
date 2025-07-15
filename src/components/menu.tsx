@@ -29,11 +29,6 @@ const Menu: React.FC = () => {
                 </div>
                 <div className="navi-button2">
                     <img src={Alarm} className='navi-second' id='alarm' alt="alarm" />
-                    <div className='navi-button2'>
-                        <img src={Profile} className='navi-third' alt="profile" />
-                        <div className='navi-third' id="nick">호두호두...</div>
-                        <div className='navi-third' id="nim">님</div>
-                    </div>
                 </div>
             </div>
         </div>
