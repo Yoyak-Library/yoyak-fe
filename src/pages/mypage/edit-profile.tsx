@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import "../../assets/css/edit-profile.css";
 import Menu from "../../components/menu";
 
@@ -93,7 +93,9 @@ const EditProfile: React.FC = () => {
                     className="password-toggle"
                     onClick={() => togglePasswordVisibility(index)}
                   >
-                    {showPasswords[index] ? <FaEye /> : <FaEyeSlash />}
+                    {showPasswords[index]
+                      ? (FaEye as unknown as JSX.Element)
+                      : (FaEyeSlash as unknown as JSX.Element)}
                   </span>
                 </div>
                 <p
