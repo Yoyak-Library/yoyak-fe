@@ -30,56 +30,77 @@ const FindAccount = () => {
     const handlePasswordOpenPopup = () => setIsPasswordPopupVisible(true);
     const handlePasswordClosePopup = () => setIsPasswordPopupVisible(false);
 
+    // 활성 상태 여부
+    const isButtonActive = (() => {
+        if (isActive === 'email') {
+            return name.trim() !== '' && nick.trim() !== '';
+        } else {
+            return (
+                name.trim() !== '' &&
+                nick.trim() !== '' &&
+                email.trim() !== '' &&
+                !emailInput
+            );
+        }
+    })();
+
     return (
         <div>
-        <div className='wrap2'>
-            <div className='sign-container'>
-            <div className='findAccount-title'>이메일/패스워드 찾기</div>
-                {/* 상태 */}
-                <div className='findAccount-state'>
-                    <div
-                        className={`findAccount-state-name ${isActive === 'email' ? 'active' : ''}`}
-                        onClick={() => setIsActive('email')}
-                    >이메일 찾기</div>
-                    <div 
-                        className={`findAccount-state-name ${isActive === 'password' ? 'active' : ''}`}
-                        onClick={() => setIsActive('password')}
-                    >패스워드 찾기</div>
-                </div>
-                {/* 이름 */}
-                <div className='findAccount-content'>
-                    <div className='sign-content-name'>이름 <span style={{ color: "#EA1215" }}>*</span></div>
-                    <input className='sign-content-input' placeholder='이름을 입력하세요.' type='text' value={name} onChange={(e) => setName(e.target.value)} autoComplete="one-time-code"/>
-                </div>
-                {/* 닉네임 */}
-                <div className='findAccount-content'>
-                    <div className='sign-content-name'>닉네임 <span style={{ color: "#EA1215" }}>*</span></div>
-                    <input className='sign-content-input' placeholder='닉네임을 입력하세요.' type='text' value={nick} onChange={(e) => setNick(e.target.value)} autoComplete="one-time-code"/>
-                </div>
-                {/* 이메일 */}
-                {isActive === 'password' &&
-                    <div className='findAccount-content'>
-                        <div className='sign-content-name'>이메일 <span style={{ color: "#EA1215" }}>*</span></div>
-                        <input
-                            className={`sign-content-input ${emailInput ? 'input-error' : ''}`}
-                            placeholder='이메일을 입력하세요.'
-                            type='email'
-                            value={email} 
-                            onChange={handleEmailChange}
-                            autoComplete="one-time-code"
-                        />
-                        {emailInput && (<div className='login-content-warn'>유효하지 않은 이메일 형식입니다.</div>)}
+            <div className='wrap2'>
+                <div className='sign-container'>
+                    <div className='findAccount-title'>이메일/패스워드 찾기</div>
+                    {/* 상태 */}
+                    <div className='findAccount-state'>
+                        <div
+                            className={`findAccount-state-name ${isActive === 'email' ? 'active' : ''}`}
+                            onClick={() => setIsActive('email')}
+                        >이메일 찾기</div>
+                        <div
+                            className={`findAccount-state-name ${isActive === 'password' ? 'active' : ''}`}
+                            onClick={() => setIsActive('password')}
+                        >패스워드 찾기</div>
                     </div>
-                }
-                <div className='findAccount-findBtn' onClick={isActive === 'email' ? handleEmailOpenPopup : handlePasswordOpenPopup}>
-                    {isActive === 'email' ? '이메일 찾기' : '패스워드 찾기'}
+                    {/* 이름 */}
+                    <div className='findAccount-content'>
+                        <div className='sign-content-name'>이름 <span style={{ color: "#EA1215" }}>*</span></div>
+                        <input className='sign-content-input' placeholder='이름을 입력하세요.' type='text' value={name} onChange={(e) => setName(e.target.value)} autoComplete="one-time-code" />
+                    </div>
+                    {/* 닉네임 */}
+                    <div className='findAccount-content'>
+                        <div className='sign-content-name'>닉네임 <span style={{ color: "#EA1215" }}>*</span></div>
+                        <input className='sign-content-input' placeholder='닉네임을 입력하세요.' type='text' value={nick} onChange={(e) => setNick(e.target.value)} autoComplete="one-time-code" />
+                    </div>
+                    {/* 이메일 */}
+                    {isActive === 'password' &&
+                        <div className='findAccount-content'>
+                            <div className='sign-content-name'>이메일 <span style={{ color: "#EA1215" }}>*</span></div>
+                            <input
+                                className={`sign-content-input ${emailInput ? 'input-error' : ''}`}
+                                placeholder='이메일을 입력하세요.'
+                                type='email'
+                                value={email}
+                                onChange={handleEmailChange}
+                                autoComplete="one-time-code"
+                            />
+                            {emailInput && (<div className='login-content-warn'>유효하지 않은 이메일 형식입니다.</div>)}
+                        </div>
+                    }
+                    <div
+                        className={`findAccount-findBtn ${isButtonActive ? 'active' : ''}`}
+                        onClick={
+                            isButtonActive
+                                ? (isActive === 'email' ? handleEmailOpenPopup : handlePasswordOpenPopup)
+                                : undefined
+                        }
+                    >
+                        {isActive === 'email' ? '이메일 찾기' : '패스워드 찾기'}
+                    </div>
                 </div>
             </div>
-        </div>
-        {/* 팝업 - 이메일 찾기 완료 */}
-        {isEmailPopupVisible && <FindEmailPopup name={name} nick={nick} onClose={handleEmailClosePopup}/>}
-        {/* 팝업 - 패스워드 찾기 완료 */}
-        {isPasswordPopupVisible && <FindPasswordPopup name={name} nick={nick} email={email} onClose={handlePasswordClosePopup}/>}
+            {/* 팝업 - 이메일 찾기 완료 */}
+            {isEmailPopupVisible && <FindEmailPopup name={name} nick={nick} onClose={handleEmailClosePopup} />}
+            {/* 팝업 - 패스워드 찾기 완료 */}
+            {isPasswordPopupVisible && <FindPasswordPopup name={name} nick={nick} email={email} onClose={handlePasswordClosePopup} />}
         </div>
     );
 }

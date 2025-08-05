@@ -32,12 +32,16 @@
     width: 528px;
     height: 48px;
     border-radius: 6px;
-    background: var(--Blue-100, #5D91FE);
+    background: #9A9A9A;
     color: var(--White, #FFF);
     text-align: center;
     line-height: 48px;
     font-size: 16px;
     font-weight: 600;
     margin-top: 64px;
+}
+
+.findAccount-findBtn.active {
+    background: var(--Blue-100, #5D91FE);
     cursor: pointer;
 }

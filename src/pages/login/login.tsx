@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 import '../../assets/css/login.css';
 
 import password_eye_on from '../../assets/images/password_eye_on.png';
@@ -7,10 +8,50 @@ import kakao from '../../assets/images/kakao.png';
 
 const LoginTsx: React.FC = () => {
     const [visibility, setVisibility] = useState<boolean>(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [warnVisible, setWarnVisible] = useState(false);
+    const [warnMessage, setWarnMessage] = useState('');
+    const [emailWarnMessage, setEmailWarnMessage] = useState('');
+    const [passwordWarnMessage, setPasswordWarnMessage] = useState('');
 
     const handleVisibility: React.MouseEventHandler<HTMLImageElement> = () => {
         setVisibility(!visibility);
     };
+
+    const handleLogin: React.MouseEventHandler<HTMLDivElement> = async () => {
+        if (!email) {
+            setEmailWarnMessage('이메일을 입력해주세요');
+        } else {
+            setEmailWarnMessage('');
+        }
+
+        if (!password) {
+            setPasswordWarnMessage('비밀번호를 입력해주세요');
+        } else {
+            setPasswordWarnMessage('');
+        }
+
+        if (!email || !password) {
+            return;
+        }
+
+        try {
+            const response = await axios.post('https://api.yoyaklery.site/auth/login', {
+                user_email: email,
+                user_pwd: password,
+            });
+            console.log("요청 데이터 확인:", { user_email: email, user_pwd: password });
+            setWarnVisible(false);
+            window.location.href = '/home';
+            console.log('로그인 성공:', response.data);
+        } catch (error) {
+            console.error('로그인 실패:', error);
+            setPasswordWarnMessage('이메일 또는 비밀번호가 일치하지 않습니다');
+            setWarnVisible(true);
+        }
+
+    }
 
     return (
         <div className="wrap">
@@ -19,38 +60,47 @@ const LoginTsx: React.FC = () => {
                 <div className="login-container">
                     <div className="login-title">로그인</div>
                     <div className="login-subtitle">요약러리에 오신 걸 환영합니다.</div>
-                    
+
                     {/* 이메일 입력 */}
                     <div className="login-content">
                         <div className="login-content-name">이메일</div>
-                        <input 
-                            className="login-content-input" 
-                            placeholder="이메일을 입력하세요." 
-                            type="text" 
+                        <input
+                            className="login-content-input"
+                            placeholder="이메일을 입력하세요."
+                            type="text"
                             autoComplete="one-time-code"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
+                        {emailWarnMessage && (
+                            <div className="login-content-warn">{emailWarnMessage}</div>
+                        )}
                     </div>
-                    
+
                     {/* 비밀번호 입력 */}
                     <div className="login-content">
                         <div className="login-content-name">비밀번호</div>
-                        <input 
-                            className="login-content-input" 
-                            placeholder="비밀번호를 입력하세요." 
-                            type={visibility ? "text" : "password"} 
+                        <input
+                            className="login-content-input"
+                            placeholder="비밀번호를 입력하세요."
+                            type={visibility ? "text" : "password"}
                             autoComplete="one-time-code"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
-                        <img 
-                            className="login-content-eye" 
-                            src={visibility ? password_eye_off : password_eye_on} 
-                            onClick={handleVisibility} 
+                        <img
+                            className="login-content-eye"
+                            src={visibility ? password_eye_off : password_eye_on}
+                            onClick={handleVisibility}
                             alt="비밀번호 보기 토글"
                         />
-                        <div className="login-content-warn">안내메시지 아직임!</div>
+                        {passwordWarnMessage && (
+                            <div className="login-content-warn">{passwordWarnMessage}</div>
+                        )}
                     </div>
 
                     {/* 로그인 버튼 */}
-                    <a href='/home'><div className="login-submit">로그인</div></a>
+                    <div className="login-submit" onClick={handleLogin}>로그인</div>
 
                     {/* 카카오 로그인 */}
                     <div className="login-submit-kakao">
