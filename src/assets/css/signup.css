@@ -77,7 +77,8 @@
     font-weight: 600;
 }
 
-.sign-content-auth.requested {
+.sign-content-auth.requested,
+.sign-content-auth.verified {
     background-color: #F3F3F3;
     color: #767676;
   }
