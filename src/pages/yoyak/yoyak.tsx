@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 import Menu from "../../components/menu";
 import Sort from '../../components/sort';
@@ -13,6 +14,7 @@ import star from '../../assets/images/star.png';
 import reset from '../../assets/images/reset.png';
 
 const YOYAK: React.FC = () => {
+    const navigate = useNavigate();
     const [summaryCount, setSummaryCount] = useState<number>(4); // 요약 개수 상태
     // 체크박스 상태
     const [checked, setChecked] = useState<{
@@ -50,6 +52,14 @@ const YOYAK: React.FC = () => {
         setText("");
     };
 
+    const handleReviewClick = () => {
+        navigate('/review');
+    }
+
+    const handleWriteYoyakClick = () => {
+        navigate('/summarize1');
+    }
+
     return (
         <div className='yoyak'>
             <Menu />
@@ -69,10 +79,10 @@ const YOYAK: React.FC = () => {
                     <div className='yoyak-intro-hashtag'>#드라마 #스릴러 #학교폭력</div>
                     <div className='yoyak-intro-badge'><img src={top} alt="대중픽 아이콘" />대중픽 Top 10 선정</div>
                     <div className='yoyak-intro-btns'>
-                        <div className='yoyak-intro-btn' id="yoyak">
+                        <div className='yoyak-intro-btn' id="yoyak" onClick={handleWriteYoyakClick}>
                             <img src={write} alt="요약하기 아이콘" />요약하기
                         </div>
-                        <div className='yoyak-intro-btn' id="review">
+                        <div className='yoyak-intro-btn' id="review" onClick={handleReviewClick}>
                             <img src={star} alt="한줄 리뷰 아이콘" />한줄 리뷰 보러가기
                         </div>
                     </div>
