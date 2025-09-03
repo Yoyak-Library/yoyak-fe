@@ -17,25 +17,3 @@
     background-color: rgba(0, 0, 0, 0.03); 
     z-index: 1; 
 }
-
-.summary__under {
-    height: 72px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.summary__content {
-    width: 288px;
-    font-size: 12px;
-    font-weight: 600;
-    margin: 2px 0;
-}
-
-.summary__title {
-    width: 288px;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 2px 0;
-}

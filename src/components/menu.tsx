@@ -18,11 +18,11 @@ const Menu: React.FC = () => {
                         id="home" onClick={() => navigate('/home')}>
                         홈
                     </div>
-                    <div className={`navi-first ${['/yoyak', '/review'].includes(location.pathname) ? 'active' : ''}`}
-                        id="summary" onClick={() => navigate('/yoyak')} >
+                    <div className={`navi-first ${['/yoyaklist','/yoyak', '/review'].includes(location.pathname) ? 'active' : ''}`}
+                        id="summary" onClick={() => navigate('/yoyaklist')} >
                         요약
                     </div>
-                    <div className={`navi-first ${['/personalLibrary'].includes(location.pathname) ? 'active' : ''}`}
+                    <div className={`navi-first ${['/personalLibrary','/personallibrary', '/myPost', '/highlightview', '/profilesetting', '/passwordcheck', '/highlight'].includes(location.pathname) ? 'active' : ''}`}
                         id="personalLibrary" onClick={() => navigate('/personalLibrary')} >
                         개인라이브러리
                     </div>

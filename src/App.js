@@ -67,7 +67,7 @@ function App() {
         <Route path="/summarize2" element={<Summarize2 />} />
 
         {/* 개인 라이브러리 */}
-        <Route path="/personallibrary" element={<PersonalLibrary />} />
+        <Route path="/personalLibrary" element={<PersonalLibrary />} />
         <Route path="/profilesetting" element={<ProfileSetting />} />
         <Route path="/passwordcheck" element={<PasswordCheck />} />
 

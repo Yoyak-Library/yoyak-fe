@@ -15,6 +15,18 @@ const PersonalLibrary: React.FC = () => {
         navigate("/profilesetting");
     };
 
+    const handleMyPostClick = () => {
+        navigate("/myPost");
+    }
+
+    const handleHighlightClick = () => {
+        navigate("/highlightview");
+    }
+
+    const handleLikeClick = () => {
+        navigate("/like");
+    }
+
     return (
         <div className="personallibrary">
             <Menu />
@@ -43,15 +55,15 @@ const PersonalLibrary: React.FC = () => {
                 </div>
 
                 <div className="personallibrary_stats-section">
-                    <button className="personallibrary_stat-box">
+                    <button className="personallibrary_stat-box" onClick={handleMyPostClick}>
                         <span className="personallibrary_stat-number">20</span>
                         <span className="personallibrary_stat-text">내가 작성한 글</span>
                     </button>
-                    <button className="personallibrary_stat-box">
+                    <button className="personallibrary_stat-box" onClick={handleHighlightClick}>
                         <span className="personallibrary_stat-number">12</span>
                         <span className="personallibrary_stat-text">하이라이트</span>
                     </button>
-                    <button className="personallibrary_stat-box">
+                    <button className="personallibrary_stat-box" onClick={handleLikeClick}>
                         <span className="personallibrary_stat-number">5</span>
                         <span className="personallibrary_stat-text">찜</span>
                     </button>
